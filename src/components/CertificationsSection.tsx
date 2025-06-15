@@ -1,23 +1,26 @@
 
 import React from "react";
-import { Award, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const CertificationsSection = () => {
   const certifications = [
     {
       title: "Introduction to IoT",
       issuer: "Cisco Networking Academy",
-      date: "June 10, 2025"
+      date: "June 10, 2025",
+      logo: "/lovable-uploads/255dcfbe-5ada-4a1c-a371-f960feaed69d.png"
     },
     {
       title: "Programming for Everybody (Getting Started with Python)",
       issuer: "University of Michigan on Coursera",
-      date: "June 2, 2025"
+      date: "June 2, 2025",
+      logo: "/lovable-uploads/b237f08a-b8cd-4179-acae-4551153239d6.png"
     },
     {
       title: "Python Data Structures",
       issuer: "University of Michigan on Coursera",
-      date: "June 4, 2025"
+      date: "June 4, 2025",
+      logo: "/lovable-uploads/b237f08a-b8cd-4179-acae-4551153239d6.png"
     }
   ];
 
@@ -41,8 +44,12 @@ const CertificationsSection = () => {
               className="glass-card p-6 text-center hover-lift opacity-0 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
-                <Award className="w-12 h-12 text-pulse-500 mx-auto" />
+              <div className="mb-4 flex justify-center">
+                <img 
+                  src={cert.logo} 
+                  alt={`${cert.issuer} Logo`}
+                  className="w-16 h-16 object-contain"
+                />
               </div>
               
               <h3 className="text-lg font-bold text-gray-900 mb-3">{cert.title}</h3>
