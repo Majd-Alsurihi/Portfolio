@@ -66,8 +66,8 @@ const Index = () => {
         <TechStackSlider />
         <ProjectsSection />
         <CertificationsSection />
-        <ContactSection />
       </main>
+      <ContactSection />
       <Footer />
     </div>
   );

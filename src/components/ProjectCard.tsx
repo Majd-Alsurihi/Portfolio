@@ -1,6 +1,6 @@
 
-import React, { useState } from "react";
-import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
+import { Github, ChevronDown, ChevronUp } from "lucide-react";
 
 interface Project {
   title: string;
@@ -14,11 +14,11 @@ interface Project {
 interface ProjectCardProps {
   project: Project;
   index: number;
+  isExpanded: boolean;
+  onToggleExpanded: () => void;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, onToggleExpanded }) => {
   return (
     <div 
       className="glass-card p-8 hover-lift opacity-0 animate-fade-in"
@@ -43,7 +43,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       </div>
 
       <button
-        onClick={() => setIsExpanded(!isExpanded)}
+        onClick={onToggleExpanded}
         className="flex items-center gap-2 text-pulse-600 hover:text-pulse-700 font-medium mb-4 transition-colors duration-300"
       >
         {isExpanded ? 'Show Less' : 'Learn More'}

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,19 +62,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Pulse Robot
+				// Updated color scheme
 				pulse: {
-					"50": "#fff7ed",
-					"100": "#ffedd5",
-					"200": "#fed7aa",
-					"300": "#fdba74",
-					"400": "#fb923c",
-					"500": "#f97316", // Primary orange
-					"600": "#ea580c",
-					"700": "#c2410c",
-					"800": "#9a3412",
-					"900": "#7c2d12",
-					"950": "#431407",
+					"50": "#fdf9e9",
+					"100": "#fbf1c6",
+					"200": "#f9e08f",
+					"300": "#f5c84f",
+					"400": "#f0ad1b",
+					"500": "#e09712", // Primary color
+					"600": "#c7841a",
+					"700": "#a46b1b",
+					"800": "#85561c",
+					"900": "#6d471a",
 				},
 				dark: {
 					"900": "#121212", // Almost black
@@ -139,7 +137,7 @@ export default {
 			backgroundImage: {
 				'hero-gradient': 'linear-gradient(90deg, hsla(24, 100%, 83%, 1) 0%, hsla(341, 91%, 68%, 1) 100%)',
 				'hero-gradient-2': 'linear-gradient(90deg, hsla(39, 100%, 77%, 1) 0%, hsla(22, 90%, 57%, 1) 100%)',
-				'pulse-gradient': 'linear-gradient(180deg, rgba(249,115,22,0.8) 0%, rgba(249,115,22,0) 100%)',
+				'pulse-gradient': 'linear-gradient(180deg, rgba(224,151,18,0.8) 0%, rgba(224,151,18,0) 100%)',
 			},
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],

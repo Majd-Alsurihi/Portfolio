@@ -3,18 +3,18 @@ import React from 'react';
 
 const TechStackSlider = () => {
   const techStack = [
-    { name: 'Python', color: '#3776ab' },
-    { name: 'C++', color: '#00599c' },
-    { name: 'JavaScript', color: '#f7df1e' },
-    { name: 'Raspberry Pi', color: '#a22846' },
-    { name: 'Arduino', color: '#00979d' },
-    { name: 'Node-RED', color: '#8f0000' },
-    { name: 'React', color: '#61dafb' },
-    { name: 'IoT', color: '#ff6b35' },
-    { name: 'PowerShell', color: '#012456' },
-    { name: 'Git', color: '#f05032' },
-    { name: 'Docker', color: '#2496ed' },
-    { name: 'Linux', color: '#fcc624' }
+    { name: 'Python', color: '#e09712' },
+    { name: 'C++', color: '#f0ad1b' },
+    { name: 'JavaScript', color: '#f5c84f' },
+    { name: 'Raspberry Pi', color: '#e09712' },
+    { name: 'Arduino', color: '#f0ad1b' },
+    { name: 'Node-RED', color: '#f5c84f' },
+    { name: 'React', color: '#e09712' },
+    { name: 'IoT', color: '#f0ad1b' },
+    { name: 'PowerShell', color: '#f5c84f' },
+    { name: 'Git', color: '#e09712' },
+    { name: 'Docker', color: '#f0ad1b' },
+    { name: 'Linux', color: '#f5c84f' }
   ];
 
   return (

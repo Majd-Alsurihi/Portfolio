@@ -15,8 +15,36 @@ const PortfolioHero = () => {
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="w-full lg:w-1/2 text-left">
+          {/* Image first on narrow screens, second on desktop */}
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
+            <div 
+              className="relative z-10 animate-fade-in" 
+              style={{ animationDelay: "0.9s" }}
+            >
+              {/* Much bigger image with blurred background */}
+              <div className="relative overflow-hidden rounded-full w-96 h-96 mx-auto shadow-2xl border-4 border-white/20 backdrop-blur-sm">
+                {/* Blurred background layer */}
+                <div 
+                  className="absolute inset-0 scale-110 blur-md"
+                  style={{
+                    backgroundImage: 'url("/lovable-uploads/c22ca5a2-e88c-4676-ac18-9a0c5e969b1c.png")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                />
+                {/* Main image */}
+                <img 
+                  src="/lovable-uploads/c22ca5a2-e88c-4676-ac18-9a0c5e969b1c.png" 
+                  alt="Majd Alsurihi - IoT Engineer" 
+                  className="relative z-10 w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-pulse-500/10 rounded-full z-20"></div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Text content second on narrow screens, first on desktop */}
+          <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
             <div 
               className="pulse-chip mb-6 opacity-0 animate-fade-in inline-flex" 
               style={{ animationDelay: "0.1s" }}
@@ -83,29 +111,6 @@ const PortfolioHero = () => {
                 >
                   <Mail className="w-6 h-6 text-gray-800" />
                 </a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right side - Personal photo with creative styling */}
-          <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            <div 
-              className="relative z-10 animate-fade-in" 
-              style={{ animationDelay: "0.9s" }}
-            >
-              <div className="relative overflow-hidden rounded-full w-80 h-80 mx-auto shadow-2xl border-4 border-white/20 backdrop-blur-sm">
-                <img 
-                  src="/lovable-uploads/c22ca5a2-e88c-4676-ac18-9a0c5e969b1c.png" 
-                  alt="Majd Alsurihi - IoT Engineer" 
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110" 
-                />
-                <div className="absolute inset-0 bg-pulse-500/10 rounded-full"></div>
-              </div>
-              
-              {/* Experience badge */}
-              <div className="absolute top-8 right-8 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg">
-                <div className="text-2xl font-bold">3+</div>
-                <div className="text-sm opacity-90">years experience</div>
               </div>
             </div>
           </div>

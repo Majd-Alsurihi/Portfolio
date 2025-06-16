@@ -30,18 +30,18 @@ const ParticleBackground = () => {
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(50, Math.floor(window.innerWidth / 30));
+      const particleCount = Math.min(80, Math.floor(window.innerWidth / 20));
       
-      const colors = ['#f97316', '#ea580c', '#c2410c', '#fb923c', '#fdba74'];
+      const colors = ['#e09712', '#f0ad1b', '#f5c84f', '#f9e08f', '#fbf1c6'];
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.3 + 0.1,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
+          size: Math.random() * 8 + 4, // Much bigger particles (4-12px)
+          opacity: Math.random() * 0.7 + 0.3, // More visible (0.3-1.0)
           color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
@@ -73,13 +73,13 @@ const ParticleBackground = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 100) {
+          if (distance < 150) { // Increased connection distance
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = '#f97316';
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = '#e09712';
+            ctx.globalAlpha = (150 - distance) / 150 * 0.3; // More visible connections
+            ctx.lineWidth = 2; // Thicker lines
             ctx.stroke();
           }
         });
@@ -109,7 +109,7 @@ const ParticleBackground = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.4 }}
+      style={{ opacity: 0.8 }} // Increased opacity
     />
   );
 };
