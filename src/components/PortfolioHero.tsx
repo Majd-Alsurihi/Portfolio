@@ -13,8 +13,6 @@ const PortfolioHero = () => {
         padding: '120px 20px 60px'
       }}
     >
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
-      
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
@@ -89,26 +87,30 @@ const PortfolioHero = () => {
             </div>
           </div>
           
-          {/* Right side - Personal photo */}
+          {/* Right side - Personal photo with creative styling */}
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
             <div 
               className="relative z-10 animate-fade-in" 
               style={{ animationDelay: "0.9s" }}
             >
-              <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+              <div className="relative overflow-hidden rounded-full w-80 h-80 mx-auto shadow-2xl border-4 border-white/20 backdrop-blur-sm">
                 <img 
                   src="/lovable-uploads/c22ca5a2-e88c-4676-ac18-9a0c5e969b1c.png" 
                   alt="Majd Alsurihi - IoT Engineer" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-pulse-500/10 rounded-full"></div>
+              </div>
+              
+              {/* Experience badge */}
+              <div className="absolute top-8 right-8 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg">
+                <div className="text-2xl font-bold">3+</div>
+                <div className="text-sm opacity-90">years experience</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-pulse-100/30 rounded-full blur-3xl -z-10"></div>
     </section>
   );
 };

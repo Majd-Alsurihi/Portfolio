@@ -57,7 +57,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/6998ba68-2ae7-43a0-b2ac-26b222df2aa3.png" 
             alt="Majd Alsurihi Logo" 
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
         </a>
 

@@ -25,18 +25,22 @@ const AboutSection = () => {
 
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex items-center justify-center gap-2 mx-auto mb-8 text-pulse-600 hover:text-pulse-700 font-medium transition-colors duration-300"
+              className="flex items-center justify-center gap-2 mx-auto mb-8 text-pulse-600 hover:text-pulse-700 font-medium transition-all duration-300 transform hover:scale-105 active:scale-95"
             >
-              {isExpanded ? 'Read Less' : 'Read My Full Story'}
-              {isExpanded ? (
-                <ChevronUp className="w-5 h-5" />
-              ) : (
-                <ChevronDown className="w-5 h-5" />
-              )}
+              <span className="transition-all duration-300">
+                {isExpanded ? 'Read Less' : 'Read My Full Story'}
+              </span>
+              <div className="transition-transform duration-300 ease-in-out">
+                {isExpanded ? (
+                  <ChevronUp className="w-5 h-5 animate-bounce" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 animate-bounce" />
+                )}
+              </div>
             </button>
 
-            <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="space-y-6 text-gray-700">
+            <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-none opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4'}`}>
+              <div className="space-y-6 text-gray-700 animate-fade-in">
                 <p className="text-lg leading-relaxed">
                   This principle has led me to dive deep into system automation, from PowerShell scripts 
                   that manage core security to Python applications that connect cloud APIs. My foundation 

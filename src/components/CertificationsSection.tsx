@@ -32,7 +32,7 @@ const CertificationsSection = () => {
             <span>Certifications</span>
           </div>
           <h2 className="section-title mb-6">Continuous Learning</h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle text-center mx-auto">
             Formal recognition of my commitment to staying current with emerging technologies and best practices.
           </p>
         </div>
