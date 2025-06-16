@@ -1,8 +1,22 @@
 
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
+  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
+
+  const toggleProjectExpanded = (index: number) => {
+    setExpandedProjects(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
+
   const projects = [
     {
       title: "YouTube to Notion: Automated Learning Pipeline",
@@ -69,7 +83,13 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard 
+              key={index} 
+              project={project} 
+              index={index}
+              isExpanded={expandedProjects.has(index)}
+              onToggleExpanded={() => toggleProjectExpanded(index)}
+            />
           ))}
         </div>
       </div>
