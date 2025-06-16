@@ -9,6 +9,8 @@ interface Project {
   role: string;
   technologies: string[];
   githubUrl: string;
+  icon?: string;
+  iconColor?: string;
 }
 
 interface ProjectCardProps {
@@ -25,7 +27,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="mb-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
+        <div className="flex items-center gap-4 mb-4">
+          {project.icon && (
+            <div 
+              className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl"
+              style={{ backgroundColor: project.iconColor + '20', color: project.iconColor }}
+            >
+              {project.icon}
+            </div>
+          )}
+          <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>
+        </div>
         <p className="text-gray-700 leading-relaxed">{project.hook}</p>
       </div>
 
@@ -68,15 +80,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
       </div>
 
       <div className="flex gap-3">
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300"
-        >
-          <Github className="w-4 h-4" />
-          View Code
-        </a>
+        {project.githubUrl !== "#" && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300"
+          >
+            <Github className="w-4 h-4" />
+            View Code
+          </a>
+        )}
       </div>
     </div>
   );

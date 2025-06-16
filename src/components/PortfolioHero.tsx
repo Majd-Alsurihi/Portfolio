@@ -21,11 +21,11 @@ const PortfolioHero = () => {
               className="relative z-10 animate-fade-in" 
               style={{ animationDelay: "0.9s" }}
             >
-              {/* Much bigger image with blurred background */}
-              <div className="relative overflow-hidden rounded-full w-96 h-96 mx-auto shadow-2xl border-4 border-white/20 backdrop-blur-sm">
-                {/* Blurred background layer */}
+              {/* Much bigger image with subtle blurred background */}
+              <div className="relative overflow-hidden rounded-full w-80 h-80 sm:w-96 sm:h-96 mx-auto shadow-2xl border-4 border-white/20">
+                {/* Subtle blurred background layer */}
                 <div 
-                  className="absolute inset-0 scale-110 blur-md"
+                  className="absolute inset-0 scale-105 blur-sm opacity-30"
                   style={{
                     backgroundImage: 'url("/lovable-uploads/c22ca5a2-e88c-4676-ac18-9a0c5e969b1c.png")',
                     backgroundSize: 'cover',
