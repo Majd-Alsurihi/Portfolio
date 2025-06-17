@@ -1,19 +1,21 @@
 
 import React from "react";
+import { portfolioConfig } from "@/config/portfolio";
 
 const AboutSection = () => {
   return (
     <section className="py-20 relative" id="about">
       <div className="section-container opacity-0 animate-on-scroll">
-        {/* More blurry glass card container */}
-        <div className="bg-white/2 backdrop-blur-3xl border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12">
+        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12`}>
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <div className="pulse-chip mb-6 inline-flex text-3xl">
+              <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
                 <span>About Me</span>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Driven by Automation</h2>
-              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed">
+              <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6`}>
+                Driven by Automation
+              </h2>
+              <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} sm:text-2xl text-gray-600 leading-relaxed`}>
                 I believe in the power of technology to eliminate friction and create seamless experiences.
               </p>
             </div>
@@ -21,7 +23,9 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">What Drives Me</h3>
+                  <h3 className={`text-${portfolioConfig.styling.titleSizes.subtitles} font-semibold text-gray-900 mb-3`}>
+                    What Drives Me
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
                     Every manual process is an opportunity for automation. I find deep satisfaction in 
                     transforming repetitive tasks into intelligent, self-running systems that free people 
@@ -30,7 +34,9 @@ const AboutSection = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">My Approach</h3>
+                  <h3 className={`text-${portfolioConfig.styling.titleSizes.subtitles} font-semibold text-gray-900 mb-3`}>
+                    My Approach
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
                     I don't just write code—I engineer solutions. From understanding the problem space 
                     to designing scalable architectures, my focus is always on creating systems that 
@@ -41,7 +47,9 @@ const AboutSection = () => {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Beyond Technical Skills</h3>
+                  <h3 className={`text-${portfolioConfig.styling.titleSizes.subtitles} font-semibold text-gray-900 mb-3`}>
+                    Beyond Technical Skills
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
                     Technology is most powerful when it serves people. I bring a human-centered approach 
                     to every project, ensuring that automated solutions enhance rather than complicate 
@@ -50,7 +58,9 @@ const AboutSection = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Continuous Learning</h3>
+                  <h3 className={`text-${portfolioConfig.styling.titleSizes.subtitles} font-semibold text-gray-900 mb-3`}>
+                    Continuous Learning
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">
                     The tech landscape evolves rapidly, and so do I. Whether it's mastering new 
                     programming languages, exploring emerging IoT protocols, or diving into cloud 
