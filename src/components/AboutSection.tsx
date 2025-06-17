@@ -6,10 +6,10 @@ const AboutSection = () => {
     <section className="py-20 relative" id="about">
       <div className="section-container opacity-0 animate-on-scroll">
         {/* More blurry glass card container */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-8 md:p-12">
+        <div className="bg-white/3 backdrop-blur-2xl border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <div className="pulse-chip mb-6 inline-flex">
+              <div className="pulse-chip mb-6 inline-flex text-2xl">
                 <span>About Me</span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Driven by Automation</h2>

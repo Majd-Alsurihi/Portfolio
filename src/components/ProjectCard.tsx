@@ -9,9 +9,6 @@ interface Project {
   role: string;
   technologies: string[];
   githubUrl: string;
-  icon?: string;
-  iconColor?: string;
-  iconPath?: string;
 }
 
 interface ProjectCardProps {
@@ -28,26 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="mb-6">
-        <div className="flex items-center gap-4 mb-4">
-          {(project.iconPath || project.icon) && (
-            <div 
-              className="w-14 h-14 rounded-lg flex items-center justify-center text-2xl p-2"
-              style={{ backgroundColor: project.iconColor + '20' }}
-            >
-              {project.iconPath ? (
-                <img 
-                  src={project.iconPath} 
-                  alt={`${project.title} icon`}
-                  className="w-full h-full object-contain"
-                  style={{ filter: `brightness(0) saturate(100%) ${project.iconColor ? `hue-rotate(${project.iconColor})` : ''}` }}
-                />
-              ) : (
-                <span style={{ color: project.iconColor }}>{project.icon}</span>
-              )}
-            </div>
-          )}
-          <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>
-        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">{project.title}</h3>
         <p className="text-gray-700 leading-relaxed">{project.hook}</p>
       </div>
 
