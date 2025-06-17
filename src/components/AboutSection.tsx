@@ -1,66 +1,60 @@
 
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
 
 const AboutSection = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <section className="py-20 relative" id="about">
       <div className="section-container opacity-0 animate-on-scroll">
-        <div className="max-w-4xl mx-auto">
-          {/* Glass card container */}
-          <div className="glass-card p-8 md:p-12">
+        {/* More blurry glass card container */}
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="pulse-chip mb-6 inline-flex">
                 <span>About Me</span>
               </div>
-              <h2 className="section-title mb-8">Driven by Automation</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Driven by Automation</h2>
+              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed">
+                I believe in the power of technology to eliminate friction and create seamless experiences.
+              </p>
             </div>
 
-            <div className="prose prose-lg mx-auto">
-              <p className="text-xl leading-relaxed text-gray-700 mb-8">
-                I'm driven by a simple principle: if a process is repetitive, it should be automated. 
-                For me, technology isn't just about code or circuits; it's about finding a point of friction—in 
-                a workflow, an OS, or a data pipeline—and engineering a smoother, more intelligent path forward.
-              </p>
-
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="flex items-center justify-center gap-2 mx-auto mb-8 text-pulse-600 hover:text-pulse-700 font-medium transition-all duration-300 transform hover:scale-105 active:scale-95"
-              >
-                <span className="transition-all duration-300">
-                  {isExpanded ? 'Read Less' : 'Read My Full Story'}
-                </span>
-                <div className="transition-transform duration-300 ease-in-out">
-                  {isExpanded ? (
-                    <ChevronUp className="w-5 h-5 animate-bounce" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 animate-bounce" />
-                  )}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">What Drives Me</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Every manual process is an opportunity for automation. I find deep satisfaction in 
+                    transforming repetitive tasks into intelligent, self-running systems that free people 
+                    to focus on what truly matters.
+                  </p>
                 </div>
-              </button>
+                
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">My Approach</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    I don't just write code—I engineer solutions. From understanding the problem space 
+                    to designing scalable architectures, my focus is always on creating systems that 
+                    are both powerful and maintainable.
+                  </p>
+                </div>
+              </div>
 
-              <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isExpanded ? 'max-h-none opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4'}`}>
-                <div className="space-y-6 text-gray-700 animate-fade-in">
-                  <p className="text-lg leading-relaxed">
-                    This principle has led me to dive deep into system automation, from PowerShell scripts 
-                    that manage core security to Python applications that connect cloud APIs. My foundation 
-                    in IT and my passion for IoT give me a full-stack perspective, allowing me to build 
-                    solutions from the hardware layer right up to the user experience.
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Beyond Technical Skills</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Technology is most powerful when it serves people. I bring a human-centered approach 
+                    to every project, ensuring that automated solutions enhance rather than complicate 
+                    the user experience.
                   </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    I believe knowledge is the most powerful tool we can share. As a Teaching Assistant, 
-                    I've had the privilege of supervising two major IoT & Embedded Systems exhibitions, 
-                    guiding students from theory to tangible projects. Empowering others to build is, 
-                    for me, the ultimate expression of technical leadership.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    I am always looking for the next challenge to solve and am currently seeking opportunities 
-                    to apply my passion for automation and problem-solving to build robust, user-focused products. 
-                    If you believe in making technology work smarter, I'd love to talk.
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Continuous Learning</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    The tech landscape evolves rapidly, and so do I. Whether it's mastering new 
+                    programming languages, exploring emerging IoT protocols, or diving into cloud 
+                    architectures, I'm always expanding my toolkit.
                   </p>
                 </div>
               </div>

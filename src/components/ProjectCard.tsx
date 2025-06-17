@@ -11,6 +11,7 @@ interface Project {
   githubUrl: string;
   icon?: string;
   iconColor?: string;
+  iconPath?: string;
 }
 
 interface ProjectCardProps {
@@ -23,17 +24,26 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, onToggleExpanded }) => {
   return (
     <div 
-      className="glass-card p-8 hover-lift opacity-0 animate-fade-in"
+      className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-4">
-          {project.icon && (
+          {(project.iconPath || project.icon) && (
             <div 
-              className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl"
-              style={{ backgroundColor: project.iconColor + '20', color: project.iconColor }}
+              className="w-14 h-14 rounded-lg flex items-center justify-center text-2xl p-2"
+              style={{ backgroundColor: project.iconColor + '20' }}
             >
-              {project.icon}
+              {project.iconPath ? (
+                <img 
+                  src={project.iconPath} 
+                  alt={`${project.title} icon`}
+                  className="w-full h-full object-contain"
+                  style={{ filter: `brightness(0) saturate(100%) ${project.iconColor ? `hue-rotate(${project.iconColor})` : ''}` }}
+                />
+              ) : (
+                <span style={{ color: project.iconColor }}>{project.icon}</span>
+              )}
             </div>
           )}
           <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>

@@ -6,16 +6,16 @@ const ContactSection = () => {
   return (
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
-        {/* Glass card container */}
-        <div className="glass-card p-8 md:p-12">
+        {/* More blurry glass card container */}
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto text-center">
             <div className="pulse-chip mb-6 inline-flex">
               <span>Let's Connect</span>
             </div>
             
-            <h2 className="section-title mb-6">Ready to Build Something Amazing?</h2>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Ready to Build Something Amazing?</h2>
             
-            <p className="section-subtitle mb-12">
+            <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
               I'm always excited to discuss new opportunities, collaborate on automation projects, 
               or share knowledge about IoT and system administration. Let's connect!
             </p>

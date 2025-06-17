@@ -5,11 +5,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const PortfolioHero = () => {
   return (
     <section 
-      className="overflow-hidden relative bg-cover min-h-screen flex items-center" 
+      className="overflow-hidden relative min-h-screen flex items-center bg-transparent" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/Header-background.webp")',
-        backgroundPosition: 'center 30%', 
         padding: '120px 20px 60px'
       }}
     >
@@ -46,7 +44,7 @@ const PortfolioHero = () => {
           {/* Text content second on narrow screens, first on desktop */}
           <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
             <div 
-              className="pulse-chip mb-6 opacity-0 animate-fade-in inline-flex" 
+              className="pulse-chip mb-6 opacity-0 animate-fade-in inline-flex text-lg" 
               style={{ animationDelay: "0.1s" }}
             >
               <span>IoT Engineer</span>

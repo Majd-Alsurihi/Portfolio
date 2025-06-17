@@ -27,14 +27,14 @@ const CertificationsSection = () => {
   return (
     <section className="py-20 relative" id="certifications">
       <div className="section-container opacity-0 animate-on-scroll">
-        {/* Glass card container */}
-        <div className="glass-card p-8 md:p-12">
+        {/* More blurry glass card container */}
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="text-center mb-16">
             <div className="pulse-chip mb-6 inline-flex">
               <span>Certifications</span>
             </div>
-            <h2 className="section-title mb-6">Continuous Learning</h2>
-            <p className="section-subtitle text-center mx-auto">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Continuous Learning</h2>
+            <p className="text-xl sm:text-2xl text-gray-600 text-center mx-auto max-w-3xl">
               Formal recognition of my commitment to staying current with emerging technologies and best practices.
             </p>
           </div>
@@ -43,7 +43,7 @@ const CertificationsSection = () => {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="glass-card p-6 text-center hover-lift opacity-0 animate-fade-in"
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4 flex justify-center">
