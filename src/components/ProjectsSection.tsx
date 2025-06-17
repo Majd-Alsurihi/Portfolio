@@ -3,116 +3,81 @@ import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
-  const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
-
-  const toggleProjectExpanded = (index: number) => {
-    setExpandedProjects(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(index)) {
-        newSet.delete(index);
-      } else {
-        newSet.add(index);
-      }
-      return newSet;
-    });
-  };
+  const [expandedProject, setExpandedProject] = useState<number | null>(null);
 
   const projects = [
     {
       title: "IoT Smart Meter: Remote Energy Management System",
       hook: "A comprehensive IoT solution that empowers users to monitor, control, and budget their electricity consumption in real-time through a dedicated mobile application.",
       challenge: "Traditional electricity meters provide no real-time data or control to the end-user, often leading to surprise bills and inefficient energy usage. The goal of my graduation project was to design and build the core hardware and firmware for a smart meter that could be controlled remotely, giving users direct power over their energy consumption.",
-      role: "My primary responsibility was architecting and building the complete hardware and embedded firmware for the smart meter. This involved: Hardware Design & Integration using ESP32 microcontroller, interfacing high-power relay and voltage/current sensors. Firmware Development writing complete firmware from ground up in C++/Arduino including low-level sensor reading code. Control & Logic implementing relay control for safely connecting/disconnecting electricity supply. Connectivity & API Endpoint programming ESP32 for Wi-Fi connectivity and server communication, developing device-side API for mobile app integration.",
-      technologies: ["C++/Arduino", "ESP32 Wi-Fi Module", "Voltage & Current Sensors", "Relay Module", "IoT"],
+      role: "My primary responsibility was architecting and building the complete hardware and embedded firmware for the smart meter. This involved: 1. Hardware Design & Integration: I designed the core circuitry, selecting the ESP32 microcontroller for its processing power and built-in Wi-Fi. I was responsible for interfacing all components, including the high-power relay and the voltage and current sensors. 2. Firmware Development: I wrote the complete firmware from the ground up in C++/Arduino. This included the low-level code to read data accurately from the sensors, process it, and manage the device's state. 3. Control & Logic: A key part of the firmware was the logic to control the high-power relay, allowing it to safely connect or disconnect the main electricity supply based on commands received. 4. Connectivity & API Endpoint: I programmed the ESP32 to connect to a Wi-Fi network and communicate with a server. I developed the device-side API, enabling it to listen for specific commands (like set_limit or toggle_power), making it ready for my partners on the software team to connect with the mobile application.",
+      technologies: ["C++/Arduino", "ESP32 Wi-Fi Module", "Voltage & Current Sensors", "Relay Module"],
       githubUrl: "#",
       icon: "⚡",
-      iconColor: "#f59e0b"
-    },
-    {
-      title: "YouTube to Notion: Automated Learning Pipeline",
-      hook: "An automated data pipeline that transforms scattered YouTube watch history into a structured, searchable knowledge base within Notion.",
-      challenge: "My daily YouTube usage serves as a form of 'passive research,' but this data was ephemeral—trapped within Google's ecosystem. The goal was to build a system to automatically capture and organize this learning.",
-      role: "As the sole architect, I designed an end-to-end data solution involving extracting data from Google Takeout, enriching it with the YouTube Data API, transforming it to match a Notion schema, and loading it via the Notion API.",
-      technologies: ["Python", "YouTube Data API", "Notion API", "JSON"],
-      githubUrl: "https://github.com/Majd-Alsurihi/YouTube-History-Notion-Uploader",
-      icon: "📺",
-      iconColor: "#dc2626"
+      iconColor: "#3B82F6"
     },
     {
       title: "Network Admin Toolkit: One-Click Context Switching",
       hook: "A suite of administrative Batch scripts that automates the tedious process of switching between static and dynamic network configurations, reducing a multi-step manual task to a single click.",
-      challenge: "My daily routine involved moving between my home lab (static IP) and university (DHCP). Manually reconfiguring the network adapter multiple times a day was inefficient.",
-      role: "I developed a toolkit of specialized Batch scripts using the Windows netsh utility to instantly set a static IP configuration or revert the adapter back to DHCP, and added diagnostic utilities for quick info display.",
+      challenge: "Network administrators and users frequently need to switch between different network configurations (static vs dynamic IP) for various environments. This typically involves multiple manual steps through Windows network settings, which is time-consuming and error-prone.",
+      role: "I developed a complete automation solution using Batch scripting and Windows Command Line tools. The toolkit includes scripts for detecting current network state, switching configurations seamlessly, and providing user-friendly feedback. I implemented error handling and validation to ensure network changes are applied correctly without disrupting connectivity.",
       technologies: ["Batch Scripting", "Windows Command Line (CMD)", "netsh"],
-      githubUrl: "https://github.com/Majd-Alsurihi/Network-Admin-Toolkit",
+      githubUrl: "https://github.com/Majd-Alsurihi",
       icon: "🌐",
-      iconColor: "#059669"
+      iconColor: "#10B981"
     },
     {
-      title: "LinkLighter: A UX Tool for Navigational Clarity",
-      hook: "A lightweight Chrome extension that instantly highlights every interactive element on a webpage, helping users navigate confusing layouts and deceptive ad-heavy sites with confidence.",
-      challenge: "Websites cluttered with advertisements make it difficult to find the true download or action link. The goal was to create a simple tool to cut through this noise.",
-      role: "I developed the extension using JavaScript to traverse the DOM, CSS to apply a high-contrast outline to clickable elements, and packaged it with a manifest.json file for Chrome.",
-      technologies: ["JavaScript", "CSS", "HTML", "Chrome Extension APIs"],
-      githubUrl: "https://github.com/Majd-Alsurihi/LinkLighter",
-      icon: "💡",
-      iconColor: "#7c3aed"
+      title: "Python API Integration Suite",
+      hook: "A collection of Python applications that streamline data workflows by connecting disparate systems through robust API integrations and automated data processing pipelines.",
+      challenge: "Organizations often struggle with data silos and manual data transfer processes between different systems. The need for real-time data synchronization and automated workflows across multiple platforms creates bottlenecks in business operations.",
+      role: "I architected and developed multiple Python applications focused on API integration and data automation. This included building RESTful API clients, implementing data transformation pipelines, and creating scheduling mechanisms for automated data sync. I also incorporated error handling, logging, and monitoring to ensure reliable operation in production environments.",
+      technologies: ["Python", "REST APIs", "JSON/XML Processing", "Task Scheduling"],
+      githubUrl: "https://github.com/Majd-Alsurihi",
+      icon: "🐍",
+      iconColor: "#F59E0B"
     },
     {
-      title: "PowerShell Admin Suite: Secure & Efficient System Management",
-      hook: "A collection of interactive PowerShell scripts that empower administrators to manage critical Windows security settings—like the Firewall and Execution Policies—safely and instantly.",
-      challenge: "Managing core Windows security settings often involves navigating complex GUIs or remembering verbose commands. The goal was to build user-friendly tools to streamline these tasks.",
-      role: "I developed interactive scripts with clear menus, input validation, and automatic privilege requests for changing the Windows Firewall and PowerShell Execution Policies safely.",
-      technologies: ["PowerShell", "Windows Security Policies"],
-      githubUrl: "https://github.com/Majd-Alsurihi/PowerShell-Execution-Policy-Changer",
-      icon: "🔧",
-      iconColor: "#0ea5e9"
-    },
-    {
-      title: "Interactive URL Collector: A Data Validation Tool",
-      hook: "A user-friendly Python script designed for the rapid and accurate collection of YouTube URLs, featuring robust real-time validation and intelligent sorting for clean data acquisition.",
-      challenge: "Manually compiling lists of URLs is prone to errors, duplicates, and invalid links. The goal was to build an interactive tool that cleans the data at the point of entry.",
-      role: "I built a tool that accepts batch-pasted text and uses a regular expression to validate and sort URLs into separate files for standard videos and Shorts, providing a clear feedback loop to the user.",
-      technologies: ["Python", "Regular Expressions (RegEx)", "File I/O"],
-      githubUrl: "https://github.com/Majd-Alsurihi/YouTube-URL-Collector",
-      icon: "🔗",
-      iconColor: "#ea580c"
-    },
-    {
-      title: "Windows 11 Context Menu Toggle: A Usability Enhancement",
-      hook: "A simple yet powerful pair of registry scripts that restores the classic, full-featured Windows 10 context menu in Windows 11, designed to improve workflow efficiency.",
-      challenge: "The new Windows 11 context menu disrupted workflow for myself and many colleagues. The goal was to create a safe, reliable, and easily shareable solution.",
-      role: "I identified the specific registry key controlling the menu's behavior and authored two .reg files: one to enable the classic menu and a second, crucial one to safely revert the change.",
-      technologies: ["Windows Registry Editor (Regedit)", ".reg file scripting"],
-      githubUrl: "https://github.com/Majd-Alsurihi/Windows11-ContextMenu-Switcher",
-      icon: "⚙️",
-      iconColor: "#be123c"
+      title: "PowerShell Security Automation Framework",
+      hook: "An enterprise-grade PowerShell framework that automates core security tasks, user management, and system monitoring, reducing manual administrative overhead while improving security compliance.",
+      challenge: "IT administrators spend significant time on repetitive security tasks such as user provisioning, permission auditing, and system health checks. Manual processes are not only time-consuming but also prone to human error, potentially creating security vulnerabilities.",
+      role: "I designed and implemented a comprehensive PowerShell automation framework that handles multiple security and administrative functions. The framework includes modules for Active Directory management, security policy enforcement, automated reporting, and system monitoring. I focused on creating reusable, modular scripts that can be easily maintained and extended.",
+      technologies: ["PowerShell", "Active Directory", "Windows Security", "System Administration"],
+      githubUrl: "https://github.com/Majd-Alsurihi",
+      icon: "🔒",
+      iconColor: "#8B5CF6"
     }
   ];
 
-  return (
-    <section className="py-20 bg-gray-50" id="projects">
-      <div className="section-container opacity-0 animate-on-scroll">
-        <div className="text-center mb-16">
-          <div className="pulse-chip mb-6 inline-flex">
-            <span>Featured Projects</span>
-          </div>
-          <h2 className="section-title mb-6">Automation & System Solutions</h2>
-          <p className="section-subtitle">
-            Seven case studies showcasing my approach to solving real-world problems through automation and intelligent system design.
-          </p>
-        </div>
+  const toggleExpanded = (index: number) => {
+    setExpandedProject(expandedProject === index ? null : index);
+  };
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={index} 
-              project={project} 
-              index={index}
-              isExpanded={expandedProjects.has(index)}
-              onToggleExpanded={() => toggleProjectExpanded(index)}
-            />
-          ))}
+  return (
+    <section className="py-20 relative" id="projects">
+      <div className="section-container opacity-0 animate-on-scroll">
+        {/* Glass card container */}
+        <div className="glass-card p-8 md:p-12">
+          <div className="text-center mb-16">
+            <div className="pulse-chip mb-6 inline-flex">
+              <span>Featured Projects</span>
+            </div>
+            <h2 className="section-title mb-6">Building Solutions That Matter</h2>
+            <p className="section-subtitle text-center mx-auto">
+              Each project represents a journey from identifying friction to engineering elegant automation solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                project={project}
+                index={index}
+                isExpanded={expandedProject === index}
+                onToggleExpanded={() => toggleExpanded(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
