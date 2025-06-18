@@ -73,7 +73,7 @@ const Navbar = () => {
                   "relative text-gray-800 hover:text-pulse-600 py-2 px-4 rounded-full transition-all duration-300",
                   "hover:bg-pulse-50 hover:shadow-md hover:scale-105",
                   "before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-pulse-200/30 before:to-pulse-300/30 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100",
-                  item.id === "home" ? "bg-pulse-100 text-pulse-700 font-medium shadow-md" : ""
+                  item.id
                 )}
                 onClick={item.href === "#" ? (e) => {
                   e.preventDefault();
@@ -110,7 +110,7 @@ const Navbar = () => {
                 "text-2xl font-medium py-4 px-8 rounded-full transition-all duration-300 hover:bg-pulse-100 hover:text-pulse-600 hover:scale-105 hover:shadow-lg",
                 "transform",
                 isMenuOpen ? `animate-fade-in` : "",
-                item.id === "home" ? "bg-pulse-200 text-pulse-700" : "text-gray-800"
+                item.id
               )}
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={(e) => {
