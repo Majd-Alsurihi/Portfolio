@@ -37,22 +37,19 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
-        isScrolled 
-          ? "bg-transparent" 
-          : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300"
       )}
     >
       <div className="container flex items-center justify-center px-4 sm:px-6 lg:px-8">
         {/* Pill-shaped navigation container */}
         <div className={cn(
           "flex items-center justify-between w-full max-w-4xl px-6 py-3 rounded-full transition-all duration-300",
-          "bg-white/10 backdrop-blur-2xl border border-white/20 shadow-lg"
+          "bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg hover:bg-white/25"
         )}>
           {/* Logo - Much Bigger */}
           <a 
             href="#" 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 group"
             onClick={(e) => {
               e.preventDefault();
               scrollToTop();
@@ -62,34 +59,35 @@ const Navbar = () => {
             <img 
               src={portfolioConfig.personal.logo}
               alt="Majd Alsurihi Logo" 
-              className="h-16 w-auto" // Increased from h-12 to h-16
+              className="h-16 w-auto transition-transform duration-300 group-hover:scale-110"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-2">
             {portfolioConfig.navigation.map((item) => (
               <a 
                 key={item.id}
                 href={item.href} 
                 className={cn(
                   "relative text-gray-800 hover:text-blue-600 py-2 px-4 rounded-full transition-all duration-300",
-                  "hover:bg-white/20",
-                  item.id === "home" ? "bg-blue-100 text-blue-600 font-medium" : ""
+                  "hover:bg-white/30 hover:shadow-md hover:scale-105",
+                  "before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-400/20 before:to-purple-400/20 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100",
+                  item.id === "home" ? "bg-white/40 text-blue-600 font-medium shadow-md" : ""
                 )}
                 onClick={item.href === "#" ? (e) => {
                   e.preventDefault();
                   scrollToTop();
                 } : undefined}
               >
-                {item.name}
+                <span className="relative z-10">{item.name}</span>
               </a>
             ))}
           </nav>
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-gray-700 p-3 rounded-full hover:bg-white/20 transition-colors duration-300" 
+            className="md:hidden text-gray-700 p-3 rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110" 
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -98,17 +96,23 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Improved Design */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white/95 backdrop-blur-md flex flex-col pt-20 px-6 md:hidden transition-all duration-300 ease-in-out",
-        isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
+        "fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center md:hidden transition-all duration-500 ease-in-out",
+        isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
       )}>
-        <nav className="flex flex-col space-y-6 items-center mt-8">
-          {portfolioConfig.navigation.map((item) => (
+        <nav className="flex flex-col space-y-8 items-center">
+          {portfolioConfig.navigation.map((item, index) => (
             <a 
               key={item.id}
               href={item.href}
-              className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100 transition-colors duration-300" 
+              className={cn(
+                "text-2xl font-medium py-4 px-8 rounded-full transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 hover:shadow-lg",
+                "transform",
+                isMenuOpen ? `animate-fade-in` : "",
+                item.id === "home" ? "bg-blue-100 text-blue-600" : "text-gray-800"
+              )}
+              style={{ animationDelay: `${index * 100}ms` }}
               onClick={(e) => {
                 if (item.href === "#") {
                   e.preventDefault();
