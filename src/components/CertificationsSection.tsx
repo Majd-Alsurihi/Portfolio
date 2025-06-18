@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Calendar } from "lucide-react";
+import { portfolioConfig } from "@/config/portfolio";
 
 const CertificationsSection = () => {
   const certifications = [
@@ -30,10 +31,12 @@ const CertificationsSection = () => {
         {/* More blurry glass card container */}
         <div className="bg-white/3 backdrop-blur-2xl border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="text-center mb-16">
-            <div className="pulse-chip mb-6 inline-flex text-2xl">
+            <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Certifications</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Continuous Learning</h2>
+            <h2 className={`font-bold text-gray-900 mb-6 text-${portfolioConfig.styling.titleSizes.sectionTitles}`}>
+              Continuous Learning
+            </h2>
             <p className="text-xl sm:text-2xl text-gray-600 text-center mx-auto max-w-3xl">
               Formal recognition of my commitment to staying current with emerging technologies and best practices.
             </p>

@@ -141,19 +141,19 @@ export const portfolioConfig = {
   styling: {
     // Font sizes (in rem units)
     titleSizes: {
-      mainName: "4xl", // Your main name
-      sectionTitles: "4xl", // About Me, Featured Projects, etc.
-      badges: "2xl", // IoT Engineer badge, section badges
+      mainName: "7xl", // Your main name
+      sectionTitles: "3xl", // About Me, Featured Projects, etc.
+      badges: "lg", // IoT Engineer badge, section badges
       subtitles: "xl", // Secondary text
-      cardTitles: "xl", // Project card titles
+      cardTitles: "lg", // Project card titles
       bodyText: "base" // Regular paragraph text
     },
     
     // Glass effect blur levels
     glassBlur: {
-      hero: "backdrop-blur-3xl", // Hero section
-      sections: "backdrop-blur-3xl", // Other sections
-      cards: "backdrop-blur-sm" // Individual cards
+      hero: "backdrop-blur-xl", // Hero section
+      sections: "backdrop-blur-xl", // Other sections
+      cards: "backdrop-blur-xl" // Individual cards
     },
 
     // Colors and opacity

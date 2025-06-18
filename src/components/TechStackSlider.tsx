@@ -14,10 +14,10 @@ const TechStackSlider = () => {
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Tech Stack</span>
             </div>
-            <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6`}>
+            <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
               Technologies I Work With
             </h2>
-            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} sm:text-2xl text-gray-600 text-center mx-auto max-w-3xl`}>
+            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 text-center mx-auto max-w-3xl`}>
               A comprehensive toolkit spanning hardware, software, and cloud technologies for complete IoT solutions.
             </p>
           </div>

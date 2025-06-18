@@ -12,10 +12,10 @@ const AboutSection = () => {
               <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
                 <span>About Me</span>
               </div>
-              <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6`}>
+              <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
                 Driven by Automation
               </h2>
-              <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} sm:text-2xl text-gray-600 leading-relaxed`}>
+              <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 leading-relaxed`}>
                 I believe in the power of technology to eliminate friction and create seamless experiences.
               </p>
             </div>

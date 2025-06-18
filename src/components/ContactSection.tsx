@@ -1,5 +1,6 @@
 
 import React from "react";
+import { portfolioConfig } from "@/config/portfolio";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const ContactSection = () => {
@@ -9,13 +10,15 @@ const ContactSection = () => {
         {/* More blurry glass card container */}
         <div className="bg-white/3 backdrop-blur-2xl border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="pulse-chip mb-6 inline-flex text-2xl">
+            <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Let's Connect</span>
             </div>
             
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Ready to Build Something Amazing?</h2>
+            <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
+              Ready to Build Something Amazing?
+            </h2>
             
-            <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 text-center mb-12 max-w-3xl mx-auto`}>
               I'm always excited to discuss new opportunities, collaborate on automation projects, 
               or share knowledge about IoT and system administration. Let's connect!
             </p>

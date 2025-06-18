@@ -18,10 +18,10 @@ const ProjectsSection = () => {
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Featured Projects</span>
             </div>
-            <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6`}>
+            <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
               Engineering Solutions
             </h2>
-            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} sm:text-2xl text-gray-600 text-center mx-auto max-w-3xl`}>
+            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles}  text-gray-600 text-center mx-auto max-w-3xl`}>
               Real-world applications where automation meets innovation, transforming complex challenges into elegant, scalable solutions.
             </p>
           </div>

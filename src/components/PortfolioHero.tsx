@@ -55,21 +55,21 @@ const PortfolioHero = () => {
             {/* Text content */}
             <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
               <div 
-                className="pulse-chip mb-6 opacity-0 animate-fade-in inline-flex text-2xl" 
+                className={`pulse-chip mb-6 opacity-0 animate-fade-in inline-flex text-${portfolioConfig.styling.titleSizes.cardTitles}`} 
                 style={{ animationDelay: "0.1s" }}
               >
                 <span>{portfolioConfig.personal.title}</span>
               </div>
               
               <h1 
-                className={`section-title text-${portfolioConfig.styling.titleSizes.mainName} sm:text-5xl lg:text-6xl xl:text-7xl leading-tight opacity-0 animate-fade-in mb-6 text-left`}
+                className={`section-title text-${portfolioConfig.styling.titleSizes.mainName} leading-tight opacity-0 animate-fade-in mb-6 text-left`}
                 style={{ animationDelay: "0.3s" }}
               >
                 {portfolioConfig.personal.name}
               </h1>
 
               <h2 
-                className={`text-${portfolioConfig.styling.titleSizes.subtitles} sm:text-2xl lg:text-3xl text-gray-700 font-medium opacity-0 animate-fade-in mb-8 text-left`}
+                className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-700 font-medium opacity-0 animate-fade-in mb-8 text-left`}
                 style={{ animationDelay: "0.5s" }}
               >
                 {portfolioConfig.personal.subtitle}
