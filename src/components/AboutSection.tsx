@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { cn } from "@/lib/utils";
 import { portfolioConfig } from "@/config/portfolio";
 
 const AboutSection = () => {
