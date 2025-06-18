@@ -23,22 +23,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
   const getProjectIcon = (title: string) => {
     const lowerTitle = title.toLowerCase();
     if (lowerTitle.includes('server') || lowerTitle.includes('automation') || lowerTitle.includes('system')) {
-      return <Server className="w-8 h-8 text-orange-500" />;
+      return <Server className="w-8 h-8" style={{ color: '#f3bf4b' }} />;
     } else if (lowerTitle.includes('mobile') || lowerTitle.includes('app') || lowerTitle.includes('iot')) {
-      return <Smartphone className="w-8 h-8 text-orange-500" />;
+      return <Smartphone className="w-8 h-8" style={{ color: '#f3bf4b' }} />;
     } else if (lowerTitle.includes('cloud') || lowerTitle.includes('api')) {
-      return <Cloud className="w-8 h-8 text-orange-500" />;
+      return <Cloud className="w-8 h-8" style={{ color: '#f3bf4b' }} />;
     } else if (lowerTitle.includes('security') || lowerTitle.includes('powershell')) {
-      return <Shield className="w-8 h-8 text-orange-500" />;
+      return <Shield className="w-8 h-8" style={{ color: '#f3bf4b' }} />;
     } else {
-      return <Server className="w-8 h-8 text-orange-500" />;
+      return <Server className="w-8 h-8" style={{ color: '#f3bf4b' }} />;
     }
   };
 
   return (
     <div 
-      className="bg-white/20 backdrop-blur-xl border-2 border-orange-200/40 rounded-2xl shadow-xl p-8 hover:shadow-2xl hover:border-orange-300/60 transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
-      style={{ animationDelay: `${index * 0.1}s` }}
+      className="bg-white/20 backdrop-blur-xl border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
+      style={{ 
+        borderColor: '#f3bf4b',
+        '--hover-border-color': '#f3bf4b'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = '#f3bf4b';
+      }}
     >
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-4">
@@ -53,7 +59,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
           {project.technologies.map((tech, techIndex) => (
             <span
               key={techIndex}
-              className="px-3 py-1 bg-orange-100 text-orange-700 border border-orange-200 rounded-full text-sm font-medium"
+              className="px-3 py-1 border rounded-full text-sm font-medium"
+              style={{ 
+                backgroundColor: '#f3bf4b20',
+                color: '#f3bf4b',
+                borderColor: '#f3bf4b'
+              }}
             >
               {tech}
             </span>
@@ -63,7 +74,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
 
       <button
         onClick={onToggleExpanded}
-        className="flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium mb-4 transition-colors duration-300"
+        className="flex items-center gap-2 font-medium mb-4 transition-colors duration-300"
+        style={{ color: '#f3bf4b' }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.color = '#d4a843';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.color = '#f3bf4b';
+        }}
       >
         {isExpanded ? 'Show Less' : 'Learn More'}
         {isExpanded ? (

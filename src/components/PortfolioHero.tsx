@@ -13,8 +13,8 @@ const PortfolioHero = () => {
       }}
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        {/* Glass card container for hero content with orange border */}
-        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 border-orange-300/50 rounded-3xl shadow-2xl p-8 md:p-12`}>
+        {/* Glass card container for hero content with new border color */}
+        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Image first on narrow screens, second on desktop */}
             <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
@@ -22,8 +22,8 @@ const PortfolioHero = () => {
                 className="relative z-10 animate-fade-in" 
                 style={{ animationDelay: "0.9s" }}
               >
-                {/* Photo with particle background and stroke */}
-                <div className="relative overflow-hidden rounded-full w-80 h-80 sm:w-96 sm:h-96 mx-auto shadow-2xl border-4 border-white/30">
+                {/* Photo with particle background and stroke - Fixed mobile cropping */}
+                <div className="relative overflow-hidden rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto shadow-2xl border-4 border-white/30">
                   {/* Particle background behind photo */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-yellow-400/20 to-orange-500/20 animate-pulse"></div>
@@ -42,11 +42,15 @@ const PortfolioHero = () => {
                     ))}
                   </div>
                   
-                  {/* Main photo with enhanced border - Fixed mobile cropping */}
+                  {/* Main photo with enhanced border - Fixed mobile cropping with better object positioning */}
                   <img 
                     src={portfolioConfig.personal.image}
                     alt="Majd Alsurihi - IoT Engineer" 
-                    className="relative z-10 w-full h-full object-cover object-center transition-transform duration-500 ease-out hover:scale-110 border-2 border-white/50 rounded-full" 
+                    className="relative z-10 w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110 border-2 border-white/50 rounded-full"
+                    style={{
+                      objectPosition: 'center center',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
               </div>

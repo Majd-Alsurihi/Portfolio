@@ -13,7 +13,7 @@ const AboutSection = () => {
   return (
     <section className="py-20 relative overflow-hidden" id="about">
       <div className="section-container opacity-0 animate-on-scroll relative z-10">
-        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 border-orange-300/50 rounded-3xl shadow-2xl p-8 md:p-12`}>
+        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-12">
               <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
@@ -56,7 +56,17 @@ const AboutSection = () => {
               {/* Read More/Less Button */}
               <button
                 onClick={toggleExpanded}
-                className="group inline-flex items-center space-x-2 mt-6 px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-500 text-white rounded-full hover:from-orange-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-orange-200/50"
+                className="group inline-flex items-center space-x-2 mt-6 px-6 py-3 text-white rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                style={{ 
+                  background: `linear-gradient(to right, #f3bf4b, #e6ac43)`,
+                  boxShadow: `0 4px 15px rgba(243, 191, 75, 0.3)`
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, #e6ac43, #d4a843)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(to right, #f3bf4b, #e6ac43)';
+                }}
               >
                 <span className="font-medium">
                   {isExpanded ? "Read Less" : "Read My Full Story"}
