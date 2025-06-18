@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* Pill-shaped navigation container */}
         <div className={cn(
           "flex items-center justify-between w-full max-w-4xl px-6 py-3 rounded-full transition-all duration-300",
-          "bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg hover:bg-white/25"
+          "bg-white/30 backdrop-blur-xl border border-pulse-200/50 shadow-lg hover:bg-white/40 hover:border-pulse-300/60"
         )}>
           {/* Logo - Much Bigger */}
           <a 
@@ -70,10 +70,10 @@ const Navbar = () => {
                 key={item.id}
                 href={item.href} 
                 className={cn(
-                  "relative text-gray-800 hover:text-blue-600 py-2 px-4 rounded-full transition-all duration-300",
-                  "hover:bg-white/30 hover:shadow-md hover:scale-105",
-                  "before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-400/20 before:to-purple-400/20 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100",
-                  item.id === "home" ? "bg-white/40 text-blue-600 font-medium shadow-md" : ""
+                  "relative text-gray-800 hover:text-pulse-600 py-2 px-4 rounded-full transition-all duration-300",
+                  "hover:bg-pulse-50 hover:shadow-md hover:scale-105",
+                  "before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-pulse-200/30 before:to-pulse-300/30 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100",
+                  item.id === "home" ? "bg-pulse-100 text-pulse-700 font-medium shadow-md" : ""
                 )}
                 onClick={item.href === "#" ? (e) => {
                   e.preventDefault();
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-gray-700 p-3 rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110" 
+            className="md:hidden text-gray-700 p-3 rounded-full hover:bg-pulse-100 transition-all duration-300 hover:scale-110" 
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -107,10 +107,10 @@ const Navbar = () => {
               key={item.id}
               href={item.href}
               className={cn(
-                "text-2xl font-medium py-4 px-8 rounded-full transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 hover:shadow-lg",
+                "text-2xl font-medium py-4 px-8 rounded-full transition-all duration-300 hover:bg-pulse-100 hover:text-pulse-600 hover:scale-105 hover:shadow-lg",
                 "transform",
                 isMenuOpen ? `animate-fade-in` : "",
-                item.id === "home" ? "bg-blue-100 text-blue-600" : "text-gray-800"
+                item.id === "home" ? "bg-pulse-200 text-pulse-700" : "text-gray-800"
               )}
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={(e) => {

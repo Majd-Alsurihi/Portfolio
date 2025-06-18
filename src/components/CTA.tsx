@@ -31,13 +31,11 @@ const CTA = () => {
   
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-white relative" id="get-access" ref={ctaRef}>
-      {/* Background gradient at the top has been removed */}
-      
       <div className="section-container relative z-10 opacity-0 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto glass-card p-6 sm:p-8 md:p-10 lg:p-14 text-center overflow-hidden relative">
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-32 sm:w-40 h-32 sm:h-40 bg-pulse-100/30 rounded-full translate-x-1/2 -translate-y-1/2 blur-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-gray-100/50 rounded-full -translate-x-1/2 translate-y-1/2 blur-2xl"></div>
+          <div className="absolute bottom-0 left-0 w-24 sm:w-32 h-24 sm:h-32 bg-pulse-200/50 rounded-full -translate-x-1/2 translate-y-1/2 blur-2xl"></div>
           
           <div className="pulse-chip mx-auto mb-4 sm:mb-6">
             <span>Limited Availability</span>
@@ -53,11 +51,11 @@ const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact" className="button-primary group flex items-center justify-center w-full sm:w-auto">
+            <a href="#contact" className="group flex items-center justify-center w-full sm:w-auto bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]">
               Request Early Access
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="#" className="button-secondary w-full sm:w-auto text-center">
+            <a href="#" className="w-full sm:w-auto text-center bg-transparent border border-pulse-300 hover:border-pulse-500 text-gray-800 hover:text-pulse-500 font-medium py-3 px-6 rounded-full transition-all duration-300">
               Join Waitlist
             </a>
           </div>
