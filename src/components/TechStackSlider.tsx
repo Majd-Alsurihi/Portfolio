@@ -13,7 +13,7 @@ const TechStackSlider = () => {
   return (
     <section className="py-12 relative overflow-hidden" id="tech-stack">
       <div className="section-container opacity-0 animate-on-scroll">
-        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 border-orange-200/30 rounded-3xl shadow-2xl p-8 md:p-12`}>
+        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 border-orange-300/50 rounded-3xl shadow-2xl p-8 md:p-12`}>
           <div className="text-center mb-12">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Tech Stack</span>
@@ -34,7 +34,7 @@ const TechStackSlider = () => {
                   key={`${tech.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
                 >
-                  <div className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 backdrop-blur-sm border-2 border-orange-200/40 hover:bg-white/30 hover:border-orange-300/60 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]">
+                  <div className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 backdrop-blur-sm border-2 border-orange-300/50 hover:bg-white/30 hover:border-orange-400/70 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]">
                     <div className="w-16 h-16 flex items-center justify-center">
                       <img
                         src={tech.icon}

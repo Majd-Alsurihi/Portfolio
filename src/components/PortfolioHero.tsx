@@ -13,8 +13,8 @@ const PortfolioHero = () => {
       }}
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        {/* Glass card container for hero content - More Blurry */}
-        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border border-white/5 rounded-3xl shadow-2xl p-8 md:p-12`}>
+        {/* Glass card container for hero content with orange border */}
+        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 border-orange-300/50 rounded-3xl shadow-2xl p-8 md:p-12`}>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Image first on narrow screens, second on desktop */}
             <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
@@ -42,11 +42,11 @@ const PortfolioHero = () => {
                     ))}
                   </div>
                   
-                  {/* Main photo with enhanced border */}
+                  {/* Main photo with enhanced border - Fixed mobile cropping */}
                   <img 
                     src={portfolioConfig.personal.image}
                     alt="Majd Alsurihi - IoT Engineer" 
-                    className="relative z-10 w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110 border-2 border-white/50 rounded-full" 
+                    className="relative z-10 w-full h-full object-cover object-center transition-transform duration-500 ease-out hover:scale-110 border-2 border-white/50 rounded-full" 
                   />
                 </div>
               </div>

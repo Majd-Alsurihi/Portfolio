@@ -7,8 +7,8 @@ const ContactSection = () => {
   return (
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
-        {/* More blurry glass card container */}
-        <div className="bg-white/10 backdrop-blur-2xl border-2 border-orange-200/30 rounded-3xl shadow-2xl p-8 md:p-12">
+        {/* Glass card container with orange border */}
+        <div className="bg-white/10 backdrop-blur-2xl border-2 border-orange-300/50 rounded-3xl shadow-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto text-center">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Let's Connect</span>
