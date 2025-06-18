@@ -3,8 +3,12 @@ import React from "react";
 import { portfolioConfig } from "@/config/portfolio";
 
 const TechStackSlider = () => {
-  // Duplicate technologies for seamless infinite scroll
-  const duplicatedTechnologies = [...portfolioConfig.technologies, ...portfolioConfig.technologies];
+  // Triple the technologies for truly seamless infinite scroll
+  const triplicatedTechnologies = [
+    ...portfolioConfig.technologies, 
+    ...portfolioConfig.technologies, 
+    ...portfolioConfig.technologies
+  ];
 
   return (
     <section className="py-12 relative overflow-hidden" id="tech-stack">
@@ -22,10 +26,10 @@ const TechStackSlider = () => {
             </p>
           </div>
 
-          {/* Tech Stack Slider */}
+          {/* Tech Stack Slider - Improved for continuous scrolling */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent p-8">
-            <div className="flex animate-scroll space-x-12">
-              {duplicatedTechnologies.map((tech, index) => (
+            <div className="flex animate-scroll-continuous space-x-12 will-change-transform">
+              {triplicatedTechnologies.map((tech, index) => (
                 <div
                   key={`${tech.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
