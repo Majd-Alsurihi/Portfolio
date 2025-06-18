@@ -8,7 +8,9 @@ const ContactSection = () => {
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
         {/* Glass card container with new border color */}
-        <div className="bg-white/10 backdrop-blur-2xl border-2 rounded-3xl shadow-2xl p-8 md:p-12" style={{ borderColor: '#f3bf4b' }}>
+        <div className={`bg-white/10 border-2 ${portfolioConfig.styling.glassBlur.sections} 
+        rounded-3xl shadow-2xl p-8 md:p-12`} 
+        style={{ borderColor: '#f3bf4b' }}>
           <div className="max-w-4xl mx-auto text-center">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Let's Connect</span>
@@ -45,7 +47,7 @@ const ContactSection = () => {
               </a>
               
               <a
-                href="mailto:contact@majd-alsurihi.com"
+                href="mailto:majd.g.alsurihi@gmail.com"
                 className="flex items-center gap-3 px-6 py-3 text-white rounded-full transition-all duration-300 hover:scale-105"
                 style={{ backgroundColor: '#f3bf4b' }}
                 onMouseEnter={(e) => {
@@ -60,11 +62,11 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="tel:+9677623322"
+                href="tel:+967776723322"
                 className="flex items-center gap-3 px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-5 h-5" />
-                <span>+967 7623322</span>
+                <span>+967 776723322</span>
               </a>
             </div>
           </div>

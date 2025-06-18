@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Github, ChevronDown, ChevronUp, Server, Smartphone, Cloud, Shield } from "lucide-react";
+import { portfolioConfig } from "@/config/portfolio";
 
 interface Project {
   title: string;
@@ -37,7 +38,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
 
   return (
     <div 
-      className="bg-white/20 backdrop-blur-xl border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105 opacity-0 animate-fade-in"
+      className={`bg-white/20 ${portfolioConfig.styling.glassBlur.projects} 
+      border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all 
+      duration-300 hover:scale-105 opacity-0 animate-fade-in`}
       style={{ 
         borderColor: '#f3bf4b',
         '--hover-border-color': '#f3bf4b'
