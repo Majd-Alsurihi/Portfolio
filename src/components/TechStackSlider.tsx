@@ -18,37 +18,23 @@ interface TechStackSliderProps {
 
 const TechStackSlider: React.FC<TechStackSliderProps> = ({
   technologies,
-  scrollSpeed = 15,
+  scrollSpeed = 20,
   title = "Technologies I Work With",
   subtitle = "A comprehensive toolkit spanning hardware, software, and cloud technologies for complete IoT solutions.",
   badgeLabel = "Tech Stack",
   highlightColor = "#f3bf4b",
   className = ""
 }) => {
-  // Triple the technologies for truly seamless infinite scroll
-  const triplicatedTechnologies = [
+  // Create multiple copies for truly seamless infinite scroll
+  const infiniteTechnologies = [
+    ...technologies,
     ...technologies,
     ...technologies,
     ...technologies
   ];
 
-  // Generate a darker shade for hover effect
-  const getDarkerShade = (color: string) => {
-    // Simple hex color darkening - you can make this more sophisticated if needed
-    const hex = color.replace('#', '');
-    const r = parseInt(hex.substr(0, 2), 16);
-    const g = parseInt(hex.substr(2, 2), 16);
-    const b = parseInt(hex.substr(4, 2), 16);
-    
-    const darker = (component: number) => Math.max(0, Math.floor(component * 0.8));
-    
-    return `#${darker(r).toString(16).padStart(2, '0')}${darker(g).toString(16).padStart(2, '0')}${darker(b).toString(16).padStart(2, '0')}`;
-  };
-
-  const darkerHighlightColor = getDarkerShade(highlightColor);
-
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg'; // fallback image
+    e.currentTarget.src = '/placeholder.svg';
   };
 
   return (
@@ -70,13 +56,16 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
             </p>
           </div>
 
-          {/* Tech Stack Slider - Improved for continuous scrolling */}
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent p-8">
+          {/* Continuous Horizontal Scroller */}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent p-6">
             <div 
-              className="flex animate-scroll-continuous space-x-12 will-change-transform"
-              style={{ animationDuration: `${scrollSpeed}s` }}
+              className="flex animate-continuous-scroll gap-8 will-change-transform"
+              style={{ 
+                animationDuration: `${scrollSpeed}s`,
+                width: 'max-content'
+              }}
             >
-              {triplicatedTechnologies.map((tech, index) => (
+              {infiniteTechnologies.map((tech, index) => (
                 <div
                   key={`${tech.name}-${index}`}
                   className="flex-shrink-0 group cursor-pointer"
@@ -84,13 +73,8 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
                   <div 
                     className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-sm border-2 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]"
                     style={{ 
-                      borderColor: highlightColor
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = darkerHighlightColor;
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = highlightColor;
+                      borderColor: highlightColor,
+                      backgroundColor: `${highlightColor}20`
                     }}
                   >
                     <div className="w-16 h-16 flex items-center justify-center">
@@ -102,7 +86,10 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
-                    <span className="text-sm font-medium text-gray-800 dark:text-white text-center whitespace-nowrap">
+                    <span 
+                      className="text-sm font-medium text-center whitespace-nowrap"
+                      style={{ color: highlightColor }}
+                    >
                       {tech.name}
                     </span>
                   </div>

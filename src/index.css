@@ -203,7 +203,26 @@
   }
 }
 
-/* Tech Stack Slider Animation - Improved for continuous scrolling */
+/* Continuous Horizontal Scroll Animation */
+@keyframes continuous-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-continuous-scroll {
+  animation: continuous-scroll linear infinite;
+  animation-play-state: running;
+}
+
+.animate-continuous-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Legacy tech stack animations */
 @keyframes scroll-continuous {
   0% {
     transform: translateX(0);
@@ -220,7 +239,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-/* Legacy animations for backward compatibility */
 @keyframes scroll {
   0% {
     transform: translateX(0);
