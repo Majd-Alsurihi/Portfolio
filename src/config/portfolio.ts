@@ -152,7 +152,7 @@ export const portfolioConfig = {
     // Glass effect blur levels
     glassBlur: {
       hero: "backdrop-blur-md", // Hero section
-      sections: "backdrop-blur-md", // Other sections
+      sections: "backdrop-blur-lg", // Other sections
       cards: "backdrop-blur-lg", // Individual cards
       projects: "backdrop-blur-3xl", // Project cards
       techstackslider: "backdrop-blur-3xl", // Tech stack slider
