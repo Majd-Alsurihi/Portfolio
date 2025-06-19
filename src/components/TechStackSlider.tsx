@@ -18,7 +18,7 @@ interface TechStackSliderProps {
 
 const TechStackSlider: React.FC<TechStackSliderProps> = ({
   technologies,
-  scrollSpeed = 20,
+  scrollSpeed = 40,
   title = "Technologies I Work With",
   subtitle = "A comprehensive toolkit spanning hardware, software, and cloud technologies for complete IoT solutions.",
   badgeLabel = "Tech Stack",
@@ -74,7 +74,6 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
                     className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-sm border-2 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]"
                     style={{ 
                       borderColor: highlightColor,
-                      backgroundColor: `${highlightColor}20`
                     }}
                   >
                     <div className="w-16 h-16 flex items-center justify-center">

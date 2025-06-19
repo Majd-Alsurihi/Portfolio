@@ -62,8 +62,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
               key={techIndex}
               className="px-3 py-1 border rounded-full text-sm font-medium"
               style={{ 
-                backgroundColor: '#f3bf4b20',
-                color: '#f3bf4b',
+                backgroundColor: '#f9efc4',
+                color: '#c7841a',
                 borderColor: '#f3bf4b'
               }}
             >
@@ -76,12 +76,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
       <button
         onClick={onToggleExpanded}
         className="flex items-center gap-2 font-medium mb-4 transition-colors duration-300"
-        style={{ color: '#f3bf4b' }}
+        style={{ color: '#c7841a' }}
         onMouseEnter={(e) => {
           e.currentTarget.style.color = '#d4a843';
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.color = '#f3bf4b';
+          e.currentTarget.style.color = '#c7841a';
         }}
       >
         {isExpanded ? 'Show Less' : 'Learn More'}
