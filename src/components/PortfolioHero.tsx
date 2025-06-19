@@ -22,7 +22,7 @@ const PortfolioHero = () => {
                 style={{ animationDelay: "0.9s" }}
               >
                 {/* Photo with particle background and stroke - Improved mobile centering */}
-                <div className="relative overflow-hidden rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto shadow-2xl border-4 border-white/30">
+                <div className="relative overflow-hidden rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto shadow-2xl border-4 border-white/30">
                   {/* Particle background behind photo */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-yellow-400/20 to-orange-500/20 animate-pulse"></div>
