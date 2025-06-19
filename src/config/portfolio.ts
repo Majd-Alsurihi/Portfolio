@@ -1,4 +1,3 @@
-
 export const portfolioConfig = {
   // Personal Information
   personal: {
@@ -149,20 +148,20 @@ export const portfolioConfig = {
       bodyText: "base" // Regular paragraph text
     },
     
-    // Glass effect blur levels - Updated to use consistent blur across all sections
+    // Glass effect blur levels - All sections now have consistent blur
     glassBlur: {
       hero: "backdrop-blur-md", // Hero section
-      sections: "backdrop-blur-md", // Other sections - now matches hero
-      cards: "backdrop-blur-md", // Individual cards - now matches hero
-      projects: "backdrop-blur-md", // Project cards - now matches hero
-      techstackslider: "backdrop-blur-md", // Tech stack slider - now matches hero
+      sections: "backdrop-blur-md", // Other sections - matches hero
+      cards: "backdrop-blur-md", // Individual cards - matches hero
+      projects: "backdrop-blur-md", // Project cards - matches hero
+      techstackslider: "backdrop-blur-md", // Tech stack slider - matches hero
     },
 
-    // Colors and opacity
+    // Colors and opacity - Made consistent across all sections
     glassOpacity: {
       hero: "bg-white/1", // Very transparent for hero
-      sections: "bg-white/1", // Very transparent for sections
-      cards: "bg-white/5" // Slightly more opaque for cards
+      sections: "bg-white/1", // Same transparency for sections
+      cards: "bg-white/1" // Same transparency for cards
     }
   }
 };

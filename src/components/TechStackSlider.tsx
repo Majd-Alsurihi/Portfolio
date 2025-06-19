@@ -1,5 +1,6 @@
 
 import React from "react";
+import { portfolioConfig } from "@/config/portfolio";
 
 interface Technology {
   name: string;
@@ -41,7 +42,7 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
     <section className={`py-12 relative overflow-hidden ${className}`} id="tech-stack">
       <div className="section-container opacity-0 animate-on-scroll">
         <div 
-          className="glass-card border-2 rounded-3xl shadow-2xl p-8 md:p-12 bg-white/70 backdrop-blur-sm dark:bg-white/10" 
+          className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.techstackslider} border-2 rounded-3xl shadow-2xl p-8 md:p-12`}
           style={{ borderColor: highlightColor }}
         >
           <div className="text-center mb-12">
