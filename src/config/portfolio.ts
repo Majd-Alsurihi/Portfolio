@@ -149,13 +149,13 @@ export const portfolioConfig = {
       bodyText: "base" // Regular paragraph text
     },
     
-    // Glass effect blur levels
+    // Glass effect blur levels - Updated to use consistent blur across all sections
     glassBlur: {
       hero: "backdrop-blur-md", // Hero section
-      sections: "backdrop-blur-lg", // Other sections
-      cards: "backdrop-blur-lg", // Individual cards
-      projects: "backdrop-blur-3xl", // Project cards
-      techstackslider: "backdrop-blur-3xl", // Tech stack slider
+      sections: "backdrop-blur-md", // Other sections - now matches hero
+      cards: "backdrop-blur-md", // Individual cards - now matches hero
+      projects: "backdrop-blur-md", // Project cards - now matches hero
+      techstackslider: "backdrop-blur-md", // Tech stack slider - now matches hero
     },
 
     // Colors and opacity
