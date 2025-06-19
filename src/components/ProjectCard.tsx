@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Github, ChevronDown, ChevronUp, Server, Smartphone, Cloud, Shield } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolio";
@@ -42,8 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
       border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all 
       duration-300 hover:scale-105 opacity-0 animate-fade-in`}
       style={{ 
-        borderColor: '#f3bf4b',
-        '--hover-border-color': '#f3bf4b'
+        borderColor: '#f3bf4b'
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = '#f3bf4b';

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { portfolioConfig } from "@/config/portfolio";
 
@@ -37,8 +36,7 @@ const TechStackSlider = () => {
                   <div 
                     className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 backdrop-blur-sm border-2 hover:bg-white/30 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]"
                     style={{ 
-                      borderColor: '#f3bf4b',
-                      '--hover-border-color': '#d4a843'
+                      borderColor: '#f3bf4b'
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = '#d4a843';
