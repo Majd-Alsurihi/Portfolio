@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import PortfolioHero from "@/components/PortfolioHero";
@@ -9,6 +8,7 @@ import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ParticleBackground from "@/components/ParticleBackground";
+import { portfolioConfig } from "@/config/portfolio";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -63,7 +63,7 @@ const Index = () => {
       <main className="space-y-4 sm:space-y-8 relative z-10">
         <PortfolioHero />
         <AboutSection />
-        <TechStackSlider />
+        <TechStackSlider technologies={portfolioConfig.technologies} />
         <ProjectsSection />
         <CertificationsSection />
       </main>
