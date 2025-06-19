@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -202,7 +203,24 @@
   }
 }
 
-/* Tech Stack Slider Animation */
+/* Tech Stack Slider Animation - Improved for continuous scrolling */
+@keyframes scroll-continuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-continuous {
+  animation: scroll-continuous 15s linear infinite;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Legacy animations for backward compatibility */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -233,25 +251,4 @@
 .parallax {
   transform: translateY(var(--parallax-y, 0));
   transition: transform 0.1s ease-out;
-}
-
-/* Tech Stack Slider Animation - Improved for continuous scrolling */
-@keyframes scroll-continuous {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-scroll-continuous {
-  animation: scroll-continuous 30s linear infinite;
-}
-
-/* Ensure smooth performance */
-.animate-scroll-continuous {
-  backface-visibility: hidden;
-  perspective: 1000;
-  transform: translate3d(0, 0, 0);
 }
