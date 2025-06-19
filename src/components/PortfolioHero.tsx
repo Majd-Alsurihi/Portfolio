@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolio";
@@ -14,16 +13,16 @@ const PortfolioHero = () => {
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Glass card container for hero content with new border color */}
-        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
+        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 rounded-3xl shadow-2xl p-6 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Image first on narrow screens, second on desktop */}
-            <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
+            <div className="w-full lg:w-1/2 order-1 lg:order-2 relative flex justify-center">
               <div 
                 className="relative z-10 animate-fade-in" 
                 style={{ animationDelay: "0.9s" }}
               >
-                {/* Photo with particle background and stroke - Fixed mobile cropping */}
-                <div className="relative overflow-hidden rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto shadow-2xl border-4 border-white/30">
+                {/* Photo with particle background and stroke - Improved mobile centering */}
+                <div className="relative overflow-hidden rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto shadow-2xl border-4 border-white/30">
                   {/* Particle background behind photo */}
                   <div className="absolute inset-0 rounded-full overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-yellow-400/20 to-orange-500/20 animate-pulse"></div>
@@ -42,7 +41,7 @@ const PortfolioHero = () => {
                     ))}
                   </div>
                   
-                  {/* Main photo with enhanced border - Fixed mobile cropping with better object positioning */}
+                  {/* Main photo with enhanced border - Better mobile sizing and positioning */}
                   <img 
                     src={portfolioConfig.personal.image}
                     alt="Majd Alsurihi - IoT Engineer" 
@@ -57,7 +56,7 @@ const PortfolioHero = () => {
             </div>
             
             {/* Text content */}
-            <div className="w-full lg:w-1/2 text-left order-2 lg:order-1">
+            <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
               <div 
                 className={`pulse-chip mb-6 opacity-0 animate-fade-in inline-flex text-${portfolioConfig.styling.titleSizes.cardTitles}`} 
                 style={{ animationDelay: "0.1s" }}

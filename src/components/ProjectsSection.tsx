@@ -12,7 +12,7 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-20 relative" id="projects">
-      <div className="section-container opacity-0 animate-on-scroll">
+      <div className="section-container animate-fade-in">
         <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="text-center mb-16">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
             <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
               Engineering Solutions
             </h2>
-            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles}  text-gray-600 text-center mx-auto max-w-3xl`}>
+            <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 text-center mx-auto max-w-3xl`}>
               Real-world applications where automation meets innovation, transforming complex challenges into elegant, scalable solutions.
             </p>
           </div>
