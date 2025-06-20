@@ -1,3 +1,4 @@
+
 export const portfolioConfig = {
   // Personal Information
   personal: {
@@ -148,19 +149,19 @@ export const portfolioConfig = {
       bodyText: "base" // Regular paragraph text
     },
     
-    // Glass effect blur levels - All sections now have consistent blur
+    // Glass effect blur levels - All sections now match navbar/hero
     glassBlur: {
-      hero: "backdrop-blur-md", // Hero section
-      sections: "backdrop-blur-xl", // Other sections - matches hero
-      cards: "backdrop-blur-xl", // Individual cards - matches hero
-      projects: "backdrop-blur-xl", // Project cards - matches hero
-      techstackslider: "backdrop-blur-xl", // Tech stack slider - matches hero
+      hero: "backdrop-blur-xl", // Hero section
+      sections: "backdrop-blur-xl", // Other sections - matches hero and navbar
+      cards: "backdrop-blur-xl", // Individual cards - matches hero and navbar
+      projects: "backdrop-blur-xl", // Project cards - matches hero and navbar
+      techstackslider: "backdrop-blur-xl", // Tech stack slider - matches hero and navbar
     },
 
-    // Colors and opacity - Identical across all sections
+    // Colors and opacity - Now matching the beautiful navbar/hero effect
     glassOpacity: {
-      sections: "bg-white/20", // Standardized opacity for all sections
-      cards: "bg-white/20" // Same opacity for cards
+      sections: "bg-white/30", // Increased opacity to match navbar/hero effect
+      cards: "bg-white/30" // Same opacity for cards to match the beautiful effect
     }
   }
 };
