@@ -6,12 +6,6 @@ import { portfolioConfig } from "@/config/portfolio";
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Introduction to IoT",
-      issuer: "Cisco Networking Academy",
-      date: "June 10, 2025",
-      logo: "/lovable-uploads/255dcfbe-5ada-4a1c-a371-f960feaed69d.png"
-    },
-    {
       title: "Programming for Everybody (Getting Started with Python)",
       issuer: "University of Michigan on Coursera",
       date: "June 2, 2025",
@@ -22,6 +16,12 @@ const CertificationsSection = () => {
       issuer: "University of Michigan on Coursera",
       date: "June 4, 2025",
       logo: "/lovable-uploads/b237f08a-b8cd-4179-acae-4551153239d6.png"
+    },
+    {
+      title: "Introduction to IoT",
+      issuer: "Cisco Networking Academy",
+      date: "June 10, 2025",
+      logo: "/lovable-uploads/255dcfbe-5ada-4a1c-a371-f960feaed69d.png"
     }
   ];
 

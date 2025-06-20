@@ -72,7 +72,15 @@ const TechStackSlider: React.FC<TechStackSliderProps> = ({
                   className="flex-shrink-0 group cursor-pointer"
                 >
                   <div 
-                    className="flex flex-col items-center space-y-4 p-6 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-sm border-2 hover:bg-white/30 dark:hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]"
+                    className={`flex flex-col items-center space-y-4 p-6 rounded-xl 
+                      ${portfolioConfig.styling.glassBlur.techstackslider} 
+                      dark:bg-white/10 
+                      hover:bg-white/30 
+                      dark:hover:bg-white/20 
+                      ${portfolioConfig.styling.glassOpacity.cards} 
+                      border-2 
+
+                      transition-all duration-300 hover:scale-105 hover:shadow-lg min-w-[120px]`}
                     style={{ 
                       borderColor: highlightColor,
                     }}

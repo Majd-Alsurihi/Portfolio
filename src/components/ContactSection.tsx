@@ -8,7 +8,7 @@ const ContactSection = () => {
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
         {/* Glass card container with new border color */}
-        <div className={`bg-white/10 border-2 ${portfolioConfig.styling.glassBlur.sections} 
+        <div className={`${portfolioConfig.styling.glassOpacity.sections} border-2 ${portfolioConfig.styling.glassBlur.sections} 
         rounded-3xl shadow-2xl p-8 md:p-12`} 
         style={{ borderColor: '#f3bf4b' }}>
           <div className="max-w-4xl mx-auto text-center">

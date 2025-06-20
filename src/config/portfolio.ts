@@ -152,17 +152,17 @@ export const portfolioConfig = {
     // Glass effect blur levels - All sections now have consistent blur
     glassBlur: {
       hero: "backdrop-blur-md", // Hero section
-      sections: "backdrop-blur-md", // Other sections - matches hero
-      cards: "backdrop-blur-md", // Individual cards - matches hero
-      projects: "backdrop-blur-md", // Project cards - matches hero
-      techstackslider: "backdrop-blur-md", // Tech stack slider - matches hero
+      sections: "backdrop-blur-xl", // Other sections - matches hero
+      cards: "backdrop-blur-xl", // Individual cards - matches hero
+      projects: "backdrop-blur-xl", // Project cards - matches hero
+      techstackslider: "backdrop-blur-xl", // Tech stack slider - matches hero
     },
 
     // Colors and opacity - Standardized to visible levels
     glassOpacity: {
       hero: "bg-white/20", // More visible opacity for hero
-      sections: "bg-white/20", // Same opacity for sections
-      cards: "bg-white/20" // Same opacity for cards
+      sections: "bg-white/30", // Same opacity for sections
+      cards: "bg-white/30" // Same opacity for cards
     }
   }
 };
