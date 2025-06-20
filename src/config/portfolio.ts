@@ -1,3 +1,4 @@
+
 export const portfolioConfig = {
   // Personal Information
   personal: {
@@ -157,11 +158,11 @@ export const portfolioConfig = {
       techstackslider: "backdrop-blur-md", // Tech stack slider - matches hero
     },
 
-    // Colors and opacity - Made consistent across all sections
+    // Colors and opacity - Standardized to visible levels
     glassOpacity: {
-      hero: "bg-white/1", // Very transparent for hero
-      sections: "bg-white/1", // Same transparency for sections
-      cards: "bg-white/1" // Same transparency for cards
+      hero: "bg-white/20", // More visible opacity for hero
+      sections: "bg-white/20", // Same opacity for sections
+      cards: "bg-white/20" // Same opacity for cards
     }
   }
 };

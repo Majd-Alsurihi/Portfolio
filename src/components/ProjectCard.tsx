@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
 
   return (
     <div 
-      className={`bg-white/20 ${portfolioConfig.styling.glassBlur.projects} 
+      className={`${portfolioConfig.styling.glassOpacity.cards} ${portfolioConfig.styling.glassBlur.projects} 
       border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all 
       duration-300 hover:scale-105 animate-fade-in`}
       style={{ 
