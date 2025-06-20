@@ -12,8 +12,8 @@ const PortfolioHero = () => {
       }}
     >
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        {/* Glass card container for hero content with new border color */}
-        <div className={`${portfolioConfig.styling.glassOpacity.hero} ${portfolioConfig.styling.glassBlur.hero} border-2 rounded-3xl shadow-2xl p-6 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
+        {/* Glass card container with identical styling to other sections */}
+        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 rounded-3xl shadow-2xl p-6 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Image first on narrow screens, second on desktop */}
             <div className="w-full lg:w-1/2 order-1 lg:order-2 relative flex justify-center">
