@@ -2,8 +2,11 @@
 import React from "react";
 import { Calendar } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CertificationsSection = () => {
+  const { t } = useLanguage();
+  
   const certifications = [
     {
       title: "Programming for Everybody (Getting Started with Python)",
@@ -32,13 +35,13 @@ const CertificationsSection = () => {
         <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
           <div className="text-center mb-16">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
-              <span>Certifications</span>
+              <span>{t('certifications.badge')}</span>
             </div>
             <h2 className={`font-bold text-gray-900 mb-6 text-${portfolioConfig.styling.titleSizes.sectionTitles}`}>
-              Continuous Learning
+              {t('certifications.title')}
             </h2>
             <p className="text-xl sm:text-2xl text-gray-600 text-center mx-auto max-w-3xl">
-              Formal recognition of my commitment to staying current with emerging technologies and best practices.
+              {t('certifications.subtitle')}
             </p>
           </div>
 

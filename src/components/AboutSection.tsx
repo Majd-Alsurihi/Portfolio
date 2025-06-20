@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { portfolioConfig } from "@/config/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useLanguage();
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
@@ -17,13 +19,13 @@ const AboutSection = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-12">
               <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
-                <span>About Me</span>
+                <span>{t('about.badge')}</span>
               </div>
               <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
-                Driven by Automation
+                {t('about.title')}
               </h2>
               <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 leading-relaxed`}>
-                I believe in the power of technology to eliminate friction and create seamless experiences.
+                {t('about.subtitle')}
               </p>
             </div>
 
@@ -31,7 +33,7 @@ const AboutSection = () => {
               {/* Always visible content */}
               <div className="text-lg text-gray-700 leading-relaxed">
                 <p className="mb-6">
-                  I'm driven by a simple principle: if a process is repetitive or taking time from me, it should be automated. For me, technology isn't just about code or circuits; it's about finding a point of friction—in a workflow, an OS, or a data pipeline—and engineering a smoother, more intelligent path forward.
+                  {t('about.intro')}
                 </p>
               </div>
 
@@ -41,15 +43,9 @@ const AboutSection = () => {
                 isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
               )}>
                 <div className="text-lg text-gray-700 leading-relaxed space-y-4 pt-4">
-                  <p>
-                    This principle has led me to dive deep into system automation, from PowerShell scripts that manage core security to Python applications that connect cloud APIs. My foundation in IT and my passion for IoT give me a full-stack perspective, allowing me to build solutions from the hardware layer right up to the user experience.
-                  </p>
-                  <p>
-                    I believe knowledge is the most powerful tool we can share. As a Teaching Assistant, I've had the privilege of supervising two major IoT & Embedded Systems exhibitions, guiding students from theory to tangible projects. Empowering others to build is, for me, the ultimate expression of technical leadership.
-                  </p>
-                  <p>
-                    I am always looking for the next challenge to solve and am currently seeking opportunities to apply my passion for automation and problem-solving to build robust, user-focused products. If you believe in making technology work smarter, I'd love to talk.
-                  </p>
+                  <p>{t('about.expanded1')}</p>
+                  <p>{t('about.expanded2')}</p>
+                  <p>{t('about.expanded3')}</p>
                 </div>
               </div>
 
@@ -69,7 +65,7 @@ const AboutSection = () => {
                 }}
               >
                 <span className="font-medium">
-                  {isExpanded ? "Read Less" : "Read My Full Story"}
+                  {isExpanded ? t('about.readLess') : t('about.readMore')}
                 </span>
                 <span className={cn(
                   "transition-transform duration-300",

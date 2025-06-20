@@ -1,12 +1,14 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolio";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,14 @@ const Navbar = () => {
     }
   };
 
+  const navigationItems = [
+    { name: t('nav.home'), href: "#", id: "home" },
+    { name: t('nav.skills'), href: "#tech-stack", id: "skills" },
+    { name: t('nav.projects'), href: "#projects", id: "projects" },
+    { name: t('nav.certifications'), href: "#certifications", id: "certifications" },
+    { name: t('nav.contact'), href: "#contact", id: "contact" }
+  ];
+
   return (
     <header
       className={cn(
@@ -46,7 +56,7 @@ const Navbar = () => {
           "flex items-center justify-between w-full max-w-4xl px-6 py-3 rounded-full transition-all duration-300",
           "bg-white/30 backdrop-blur-xl border border-pulse-200/50 shadow-lg hover:bg-white/40 hover:border-pulse-300/60"
         )}>
-          {/* Logo - Much Bigger */}
+          {/* Logo */}
           <a 
             href="#" 
             className="flex items-center space-x-2 group"
@@ -65,7 +75,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-2">
-            {portfolioConfig.navigation.map((item) => (
+            {navigationItems.map((item) => (
               <a 
                 key={item.id}
                 href={item.href} 
@@ -85,24 +95,27 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <button 
-            className="md:hidden text-gray-700 p-3 rounded-full hover:bg-pulse-100 transition-all duration-300 hover:scale-110" 
-            onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Language Toggle and Mobile Menu Button */}
+          <div className="flex items-center space-x-3">
+            <LanguageToggle />
+            <button 
+              className="md:hidden text-gray-700 p-3 rounded-full hover:bg-pulse-100 transition-all duration-300 hover:scale-110" 
+              onClick={toggleMenu}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Navigation - Improved Design */}
+      {/* Mobile Navigation */}
       <div className={cn(
         "fixed inset-0 z-40 bg-white/95 backdrop-blur-xl flex flex-col justify-center items-center md:hidden transition-all duration-500 ease-in-out",
         isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-8 items-center">
-          {portfolioConfig.navigation.map((item, index) => (
+          {navigationItems.map((item, index) => (
             <a 
               key={item.id}
               href={item.href}

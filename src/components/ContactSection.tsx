@@ -2,8 +2,11 @@
 import React from "react";
 import { portfolioConfig } from "@/config/portfolio";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
@@ -13,16 +16,15 @@ const ContactSection = () => {
         style={{ borderColor: '#f3bf4b' }}>
           <div className="max-w-4xl mx-auto text-center">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
-              <span>Let's Connect</span>
+              <span>{t('contact.badge')}</span>
             </div>
             
             <h2 className={`text-${portfolioConfig.styling.titleSizes.sectionTitles} font-bold text-gray-900 mb-6`}>
-              Ready to Build Something Amazing?
+              {t('contact.title')}
             </h2>
             
             <p className={`text-${portfolioConfig.styling.titleSizes.subtitles} text-gray-600 text-center mb-12 max-w-3xl mx-auto`}>
-              I'm always excited to discuss new opportunities, collaborate on automation projects, 
-              or share knowledge about IoT and system administration. Let's connect!
+              {t('contact.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center flex-wrap">
@@ -33,7 +35,7 @@ const ContactSection = () => {
                 className="flex items-center gap-3 px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all duration-300 hover:scale-105"
               >
                 <Github className="w-5 h-5" />
-                <span>GitHub Profile</span>
+                <span>{t('contact.github')}</span>
               </a>
               
               <a
@@ -43,7 +45,7 @@ const ContactSection = () => {
                 className="flex items-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>LinkedIn Profile</span>
+                <span>{t('contact.linkedin')}</span>
               </a>
               
               <a
@@ -58,7 +60,7 @@ const ContactSection = () => {
                 }}
               >
                 <Mail className="w-5 h-5" />
-                <span>Email Me</span>
+                <span>{t('contact.email')}</span>
               </a>
 
               <a
