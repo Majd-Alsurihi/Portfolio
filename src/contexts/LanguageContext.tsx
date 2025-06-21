@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'en' | 'ar';
@@ -61,7 +60,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'about.intro': "I'm driven by a simple principle: if a process is repetitive or taking time from me, it should be automated. For me, technology isn't just about code or circuits; it's about finding a point of friction—in a workflow, an OS, or a data pipeline—and engineering a smoother, more intelligent path forward.",
       'about.expanded1': 'This principle has led me to dive deep into system automation, from PowerShell scripts that manage core security to Python applications that connect cloud APIs. My foundation in IT and my passion for IoT give me a full-stack perspective, allowing me to build solutions from the hardware layer right up to the user experience.',
       'about.expanded2': "I believe knowledge is the most powerful tool we can share. As a Teaching Assistant, I've had the privilege of supervising two major IoT & Embedded Systems exhibitions, guiding students from theory to tangible projects. Empowering others to build is, for me, the ultimate expression of technical leadership.",
-      'about.expanded3': 'I am always looking for the next challenge to solve and am currently seeking opportunities to apply my passion for automation and problem-solving to build robust, user-focused products. If you believe in making technology work smarter, I'd love to talk.',
+      'about.expanded3': 'I am always looking for the next challenge to solve and am currently seeking opportunities to apply my passion for automation and problem-solving to build robust, user-focused products. If you believe in making technology work smarter, I would love to talk.',
       'about.readMore': 'Read My Full Story',
       'about.readLess': 'Read Less',
       
