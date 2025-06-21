@@ -10,10 +10,7 @@ const ContactSection = () => {
   return (
     <section className="py-20 relative" id="contact">
       <div className="section-container opacity-0 animate-on-scroll">
-        {/* Glass card container with new border color */}
-        <div className={`${portfolioConfig.styling.glassOpacity.sections} border-2 ${portfolioConfig.styling.glassBlur.sections} 
-        rounded-3xl shadow-2xl p-8 md:p-12`} 
-        style={{ borderColor: '#f3bf4b' }}>
+        <div className={`${portfolioConfig.styling.glassBlur.sections} p-8 md:p-12`}>
           <div className="max-w-4xl mx-auto text-center">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>{t('contact.badge')}</span>

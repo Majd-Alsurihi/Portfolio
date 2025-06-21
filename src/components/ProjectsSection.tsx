@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   return (
     <section className="py-20 relative" id="projects">
       <div className="section-container animate-fade-in">
-        <div className={`${portfolioConfig.styling.glassOpacity.sections} ${portfolioConfig.styling.glassBlur.sections} border-2 rounded-3xl shadow-2xl p-8 md:p-12`} style={{ borderColor: '#f3bf4b' }}>
+        <div className={`${portfolioConfig.styling.glassBlur.sections} p-8 md:p-12`}>
           <div className="text-center mb-16">
             <div className={`pulse-chip mb-6 inline-flex text-${portfolioConfig.styling.titleSizes.badges}`}>
               <span>Featured Projects</span>

@@ -1,4 +1,3 @@
-
 export const portfolioConfig = {
   // Personal Information
   personal: {
@@ -137,7 +136,7 @@ export const portfolioConfig = {
     // Add more certifications here
   ],
 
-  // Styling Configuration
+  // Styling Configuration - Updated to use new glass classes
   styling: {
     // Font sizes (in rem units)
     titleSizes: {
@@ -149,19 +148,19 @@ export const portfolioConfig = {
       bodyText: "base" // Regular paragraph text
     },
     
-    // Glass effect blur levels - All sections now match navbar/hero
+    // Enhanced glass effect classes
     glassBlur: {
-      hero: "backdrop-blur-xl", // Hero section
-      sections: "backdrop-blur-xl", // Other sections - matches hero and navbar
-      cards: "backdrop-blur-xl", // Individual cards - matches hero and navbar
-      projects: "backdrop-blur-xl", // Project cards - matches hero and navbar
-      techstackslider: "backdrop-blur-xl", // Tech stack slider - matches hero and navbar
+      hero: "glass-section", // Hero section
+      sections: "glass-section", // Other sections
+      cards: "glass-card", // Individual cards
+      projects: "glass-card", // Project cards
+      techstackslider: "glass-section", // Tech stack slider
     },
 
-    // Colors and opacity - Now matching the beautiful navbar/hero effect
+    // Glass opacity - now handled by CSS classes
     glassOpacity: {
-      sections: "bg-white/30", // Increased opacity to match navbar/hero effect
-      cards: "bg-white/30" // Same opacity for cards to match the beautiful effect
+      sections: "", // Handled by glass-section class
+      cards: "" // Handled by glass-card class
     }
   }
 };
