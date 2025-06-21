@@ -87,7 +87,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'nav.home': 'الرئيسية',
       'nav.skills': 'المهارات',
       'nav.projects': 'المشاريع',
-      'nav.certifications': 'الشهادات',
+      'nav.certifications': 'الشهائد',
       'nav.contact': 'التواصل',
       
       // Hero Section
@@ -104,11 +104,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'about.expanded1': 'هذا المبدأ قادني للغوص عميقًا في أتمتة الأنظمة، من سكريبت PowerShell التي تدير الأمان الأساسي إلى تطبيقات Python التي تربط واجهات برمجة التطبيقات السحابية. أساسي في تكنولوجيا المعلومات وشغفي بإنترنت الأشياء يمنحني منظورًا شاملاً، مما يسمح لي ببناء حلول من طبقة الأجهزة وصولاً إلى تجربة المستخدم.',
       'about.expanded2': 'أؤمن أن المعرفة هي أقوى أداة يمكننا مشاركتها. كمساعد تدريس، حظيت بامتياز الإشراف على معرضين رئيسيين لإنترنت الأشياء والأنظمة المدمجة، وتوجيه الطلاب من النظرية إلى المشاريع الملموسة. تمكين الآخرين من البناء هو، بالنسبة لي، أسمى تعبير عن القيادة التقنية.',
       'about.expanded3': 'أبحث دائمًا عن التحدي التالي للحل وأسعى حاليًا للحصول على فرص لتطبيق شغفي بالأتمتة وحل المشكلات لبناء منتجات قوية تركز على المستخدم. إذا كنت تؤمن بجعل التكنولوجيا تعمل بذكاء أكبر، فأنا أحب أن أتحدث.',
-      'about.readMore': 'اقرأ قصتي الكاملة',
+      'about.readMore': 'تعرف على أكثر',
       'about.readLess': 'اقرأ أقل',
       
       // Certifications Section
-      'certifications.badge': 'الشهادات',
+      'certifications.badge': 'الشهائد',
       'certifications.title': 'التعلم المستمر',
       'certifications.subtitle': 'اعتراف رسمي بالتزامي بالبقاء على اطلاع بالتقنيات الناشئة وأفضل الممارسات.',
       
@@ -116,7 +116,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       'contact.badge': 'لنتواصل',
       'contact.title': 'مستعد لبناء شيء مذهل؟',
       'contact.subtitle': 'أنا متحمس دائمًا لمناقشة الفرص الجديدة، أو التعاون في مشاريع الأتمتة، أو مشاركة المعرفة حول إنترنت الأشياء وإدارة الأنظمة. لنتواصل!',
-      'contact.github': 'ملف GitHub',
+      'contact.github': 'حسابي في GitHub',
       'contact.linkedin': 'ملف LinkedIn',
       'contact.email': 'راسلني',
       
