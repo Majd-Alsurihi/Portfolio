@@ -30,7 +30,7 @@ const ParticleBackground = () => {
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(80, Math.floor(window.innerWidth / 20));
+      const particleCount = Math.min(120, Math.floor(window.innerWidth / 14));
       
       const colors = ['#e09712', '#f0ad1b', '#f5c84f', '#f9e08f', '#fbf1c6'];
       
@@ -40,8 +40,8 @@ const ParticleBackground = () => {
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.8,
           vy: (Math.random() - 0.5) * 0.8,
-          size: Math.random() * 8 + 4, // Much bigger particles (4-12px)
-          opacity: Math.random() * 0.7 + 0.3, // More visible (0.3-1.0)
+          size: Math.random() * 10 + 5, // Bigger particles (5-15px)
+          opacity: Math.random() * 0.8 + 0.2, // More visible (0.2-1.0)
           color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
