@@ -40,10 +40,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
     <div 
       className="glass-surface p-8 hover:scale-105 animate-fade-in transition-all duration-300"
     >
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#f3bf4b';
-      }}
-    >
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-4">
           {getProjectIcon(project.title)}
