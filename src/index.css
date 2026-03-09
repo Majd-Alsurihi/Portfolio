@@ -162,33 +162,31 @@
     @apply text-lg md:text-xl text-gray-600 mt-4 max-w-3xl;
   }
 
-  /* Enhanced glass card effect to match hero and navbar */
-  .glass-card {
+  /* Unified glass surface — single source of truth */
+  .glass-surface {
     @apply relative;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 2px solid rgba(243, 191, 75, 1);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 2px solid rgba(243, 191, 75, 0.6);
     border-radius: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
     transition: all 0.3s ease;
   }
 
-  .glass-card:hover {
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  .glass-surface:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(243, 191, 75, 0.85);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
-  /* Enhanced glass section effect */
-  .glass-section {
-    @apply relative;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 2px solid rgba(243, 191, 75, 1);
-    border-radius: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
+  /* Backward compat aliases */
+  .glass-card { @apply glass-surface; }
+  .glass-section { @apply glass-surface; }
 
   .feature-card {
     @apply p-6 rounded-2xl transition-all duration-500 hover:translate-y-[-5px];
