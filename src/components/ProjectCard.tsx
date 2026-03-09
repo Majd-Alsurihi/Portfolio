@@ -38,15 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, isExpanded, o
 
   return (
     <div 
-      className={`${portfolioConfig.styling.glassOpacity.cards} ${portfolioConfig.styling.glassBlur.projects} 
-      border-2 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all 
-      duration-300 hover:scale-105 animate-fade-in`}
-      style={{ 
-        borderColor: '#f3bf4b'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = '#f3bf4b';
-      }}
+      className="glass-surface p-8 hover:scale-105 animate-fade-in transition-all duration-300"
     >
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-4">
