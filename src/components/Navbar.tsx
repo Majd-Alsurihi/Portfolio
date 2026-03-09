@@ -53,8 +53,8 @@ const Navbar = () => {
       <div className="container flex items-center justify-center px-4 sm:px-6 lg:px-8">
         {/* Pill-shaped navigation container */}
         <div className={cn(
-          "flex items-center justify-between w-full max-w-4xl px-6 py-3 rounded-full transition-all duration-300",
-          "bg-white/30 backdrop-blur-xl border border-pulse-200/50 shadow-lg hover:bg-white/40 hover:border-pulse-300/60"
+          "flex items-center justify-between w-full max-w-4xl px-6 py-3 transition-all duration-300",
+          "glass-surface"
         )}>
           {/* Logo */}
           <a 
