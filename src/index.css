@@ -102,10 +102,15 @@
   }
 
   body {
-    @apply bg-white text-black font-sans antialiased;
-    /* Add a subtle background pattern for better backdrop-blur effect */
-    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
-    background-size: 20px 20px;
+    @apply text-black font-sans antialiased;
+    background:
+      radial-gradient(ellipse at 20% 0%, hsla(36, 90%, 70%, 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, hsla(24, 95%, 65%, 0.20) 0%, transparent 40%),
+      radial-gradient(ellipse at 50% 50%, hsla(40, 80%, 85%, 0.30) 0%, transparent 60%),
+      radial-gradient(ellipse at 30% 80%, hsla(36, 90%, 75%, 0.20) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 90%, hsla(24, 80%, 70%, 0.15) 0%, transparent 40%),
+      linear-gradient(180deg, hsl(40, 30%, 97%) 0%, hsl(35, 25%, 93%) 50%, hsl(40, 30%, 96%) 100%);
+    background-attachment: fixed;
   }
 
   /* Smooth scrolling */
